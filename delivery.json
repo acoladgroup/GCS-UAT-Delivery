@@ -1,0 +1,11 @@
+{"delivery": {
+    "deployed": false,
+    "spring":     [
+                {
+            "artefactId" : "service-test",
+			"groupId" : "com.amplexor.gcs.cloud.service",
+			"version" : "3.0.1.0-RC1"
+        }
+    ]
+	}
+}
