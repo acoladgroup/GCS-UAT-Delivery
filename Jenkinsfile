@@ -2,12 +2,12 @@ def json
 def htmlContent = '<html><head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script></head><body>'
 
 pipeline {
-    agent  { node { label 'slaveci10-gcs||GCS_HIVE' } }
+    agent  { node { label 'alt' } }
     parameters {
         booleanParam(name: "Dry run ?", description: 'Be carefull, you will deploy this version on UAT environment', defaultValue: true)
     }
     environment {
-        JAVA_HOME = "C:/java/jdk1.8.0_101"
+        JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
     }
     stages {
         stage('Init') {
@@ -42,11 +42,11 @@ pipeline {
 
                     for (String item : json.delivery.spring) {
                         println("Download of ${item.groupId}:${item.artefactId}:${item.version}")
-                        bat "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=${item.groupId}:${item.artefactId}:${item.version}:war -DoutputDirectory=."
+                        sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=${item.groupId}:${item.artefactId}:${item.version}:war -DoutputDirectory=."
 
                         if (!params['Dry run ?']) {
                             println("Deploy of ${item.groupId}:${item.artefactId}:${item.version}")
-                            bat "mvn tomcat7:deploy-only -Dpath=/${item.artefactId} -DwarFile=${item.artefactId}-${item.version}.war"
+                            sh "mvn tomcat7:deploy-only -Dpath=/${item.artefactId} -DwarFile=${item.artefactId}-${item.version}.war"
                         }
 
                         htmlContent += "<li>${item.artefactId} in version ${item.version}</li>"
@@ -62,14 +62,14 @@ pipeline {
             script {
                 // Lock the delivery file to avoid a second execution
                 if (!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && !params['Dry run ?']) {
-                    bat "del -f delivery.json"
+                    sh "del -f delivery.json"
 
                     json.delivery.deployed = true
                     writeJSON json: json, file: 'delivery.json', pretty: 2
 
-                    bat "git add delivery.json"
-                    bat 'git commit -m "locking of this version"'
-                    bat "git push --set-upstream origin ${env.BRANCH_NAME}"
+                    sh "git add delivery.json"
+                    sh 'git commit -m "locking of this version"'
+                    sh "git push --set-upstream origin ${env.BRANCH_NAME}"
                 }
             }
         }
