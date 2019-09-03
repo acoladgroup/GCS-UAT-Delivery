@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<tomcatManagerUrl>http://lu01du-gcs-apps.com.euroscript.local:8080/manager/text</tomcatManagerUrl>
+		<tomcatManagerUrl>http://xi02uu-gcm-apps.amplexor.com:8080/manager/text</tomcatManagerUrl>
 		<tomcatUser>admin</tomcatUser>
 		<tomcatPassword>welcome1</tomcatPassword>
 	</properties>
