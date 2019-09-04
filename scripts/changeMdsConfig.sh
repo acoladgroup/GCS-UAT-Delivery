@@ -7,6 +7,13 @@
 #				EAR_FILE : File to change MDS configuration
 ###########################################################################################
 
+# Check for input arguments
+if [ "$#" -ne 1 ]; then
+    echo "Usage: ./changeMdsConfig.sh <EAR_FILE>"
+	echo "EAR file not updated"
+	exit -1
+fi
+
 echo "## Update the MDS configuration ##"
 
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh

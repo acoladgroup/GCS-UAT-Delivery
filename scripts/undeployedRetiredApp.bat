@@ -6,6 +6,7 @@
 @REM #				APP_NAME : Name of the application
 @REM ###########################################################################################
 
+# Check for input arguments
 @if "%1" == "" (
 	@goto :usage
 )
@@ -26,7 +27,7 @@ java weblogic.WLST ./scripts/undeployedRetiredApp.py %ADMIN_URL% %ADMIN_LOGIN% %
 @goto :end
 
 :usage
-@echo "Usage: ./undeployedRetiredApp.sh <APP_NAME>"
+@echo "Usage: ./undeployedRetiredApp.bat <APP_NAME>"
 @echo "Application is not retired"
 
 :end

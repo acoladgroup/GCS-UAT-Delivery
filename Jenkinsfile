@@ -114,6 +114,51 @@ def deployAdfApp(gcmAppName, item) {
     }
 }
 
+def deploySoaMds(item) {
+    println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
+
+    try {
+        println("Download of " + item.group + ":" + item.name + ":" + item.version)
+        try {
+            sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar -DoutputDirectory=" + workingDirectory
+            item.downloaded = true
+        } catch (e) {
+            println('ERROR : ' + e)
+            item.downloaded = false
+            item.deployed = false
+            throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
+        }
+
+        if (!params['Dry run ?']) {
+            println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
+
+            def stdoutResult = sh(returnStdout: true, script: "./scripts/deployMds.sh " + workingDirectory + "/" + item.name + "-" + item.version + ".jar").trim()
+
+            println("************ Result of SOAMDS deployment  **************")
+            println(stdoutResult)
+            println("**************************************************************")
+
+            if (!stdoutResult.contains("Operation \"importMetadata\" completed")) {
+                item.deployed = false
+                throw new Exception("Can't deploy the SOAMDS " + item.group + ":" + item.name + ":" + item.version)
+            }
+
+            item.deployed = true
+        } else {
+            item.deployed = false
+        }
+
+        item.status = 'OK'
+    } catch (e) {
+        fullyDeployed = false
+        item.status = 'IN ERROR : ' + e
+    } finally {
+        dir(workingDirectory) {
+            // deleteDir()
+        }
+    }
+}
+
 /**
  * Change the MDS configuration of an ADF app
  * @param item
@@ -121,7 +166,7 @@ def deployAdfApp(gcmAppName, item) {
 def changeMDSConfiguration(item) {
     println("Change MDS configuration")
 
-    def stdoutResult = bat(returnStdout: true, script: "./scripts/changeMdsConfig.bat " + workingDirectory + "/" + item.name + "-" + item.version + ".ear").trim()
+    def stdoutResult = sh(returnStdout: true, script: "./scripts/changeMdsConfig.sh " + workingDirectory + "/" + item.name + "-" + item.version + ".ear").trim()
 
     println("************ Result of change MDS configuration **************")
     println(stdoutResult)
@@ -141,7 +186,7 @@ def changeMDSConfiguration(item) {
 def undeployedRetiredApp(gcmAppName, item) {
     println("Undeploy the retired version of " + gcmAppName)
 
-    stdoutResult = bat(returnStdout: true, script: "./scripts/undeployedRetiredApp.bat " + gcmAppName)
+    stdoutResult = sh(returnStdout: true, script: "./scripts/undeployedRetiredApp.sh " + gcmAppName)
 
     println("********** Result of undeploy the retired version ************")
     println(stdoutResult)
@@ -182,7 +227,7 @@ def unzipConfigplan(item) {
 def deployApp(gcmAppName, item) {
     println("Deploy of " + gcmAppName)
 
-    stdoutResult = bat(returnStdout: true, script: "./scripts/deployApp.bat " + gcmAppName + " ./work/" + item.name + "-" + item.version + ".ear ./work/" + gcsEnvironment + "/" + gcmAppName + "-plan.xml")
+    stdoutResult = sh(returnStdout: true, script: "./scripts/deployApp.sh " + gcmAppName + " ./work/" + item.name + "-" + item.version + ".ear ./work/" + gcsEnvironment + "/" + gcmAppName + "-plan.xml")
 
     println("************** Result of deploy the EAR file *****************")
     println(stdoutResult)
@@ -269,6 +314,17 @@ def buildHTMLReport(items) {
     }
     html+='</fieldset><hr/>'
 
+    // Display MDS deployment result
+    html += '<fieldset>'
+    html += '<legend>SOA MDS</legend>'
+
+    if (items.delivery.soa_mds != null && items.delivery.soa_mds.size() == 0){
+        html += '<span>No artifacts found for this version</span>'
+    } else {
+        html += buildTable(items.delivery.soa_mds);
+    }
+    html+='</fieldset><hr/>'
+
     // Display Spring services deployment result
     html += '<fieldset>'
     html += '<legend>Spring services</legend>'
@@ -341,16 +397,6 @@ pipeline {
                 }
             }
         }
-        stage('Deploy Spring component') {
-            when { expression {!json.delivery.deployed} } //  && env.BRANCH_NAME.startsWith('release')
-            steps {
-                script {
-                    for (String item : json.delivery.spring) {
-                        deploySpring(item)
-                    }
-                }
-            }
-        }
         stage('Deploy GCM APP') {
             when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
             steps {
@@ -412,7 +458,7 @@ pipeline {
             }
         }
         stage('Deploy PMWS') {
-            when { expression {!json.delivery.deployed } } //  && env.BRANCH_NAME.startsWith('release')
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
             steps {
                 script {
                     for (String item : json.delivery.adf_pmws) {
@@ -422,6 +468,31 @@ pipeline {
                             println ("Component already deployed. Nothing to do")
                             item.redeployedStatus = true
                         }
+                    }
+                }
+            }
+        }
+        stage('Deploy SOA MDS') {
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            steps {
+                script {
+                    for (String item : json.delivery.soa_mds) {
+                        if (!item.deployed) {
+                            deploySoaMds(item)
+                        } else {
+                            println ("Component already deployed. Nothing to do")
+                            item.redeployedStatus = true
+                        }
+                    }
+                }
+            }
+        }
+        stage('Deploy Spring component') {
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            steps {
+                script {
+                    for (String item : json.delivery.spring) {
+                        deploySpring(item)
                     }
                 }
             }
