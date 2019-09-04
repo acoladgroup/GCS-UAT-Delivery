@@ -2,17 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.amplexor.gcs.cloud</groupId>
-	<artifactId>deploy-tomcat</artifactId>
+	<groupId>com.amplexor.gcs</groupId>
+	<artifactId>deploy-to-uat</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<properties>
+		<!--tomcatManagerUrl>http://lu01tu-gcm-apps.com.euroscript.local:8080/manager/text</tomcatManagerUrl-->
 		<tomcatManagerUrl>http://xi02uu-gcm-apps.amplexor.com:8080/manager/text</tomcatManagerUrl>
 		<tomcatUser>admin</tomcatUser>
 		<tomcatPassword>welcome1</tomcatPassword>
 	</properties>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -30,6 +31,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<repositories>
 		<repository>
 			<id>gcm-release</id>
@@ -51,15 +53,5 @@
 			<url>https://nexus.amplexor.com/content/repositories/thirdparty/</url>
 			<layout>default</layout>
 		</repository>
-	</repositories>	 
-  
-  	<dependencies>
-         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-    <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-        <version>2.9.9.3</version>
-    </dependency>
-
-  </dependencies>
+	</repositories>
 </project>
