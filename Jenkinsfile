@@ -382,12 +382,12 @@ def buildTable(listOfItems) {
 
 
 pipeline {
-    agent  { node { label 'slaveci10-gcs||GCS_HIVE' } }
+    agent  { node { label 'alt' } }
     parameters {
         booleanParam(name: "Dry run ?", description: 'Be carefull, you will deploy this version on TEST environment', defaultValue: true)
     }
     environment {
-        JAVA_HOME = "C:/java/jdk1.8.0_101"
+        JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
     }
     stages {
         stage('Read delivery file') {
