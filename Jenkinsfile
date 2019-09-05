@@ -28,7 +28,7 @@ def deploySpring(item) {
             if (!params['Dry run ?']) {
                 println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
                 try {
-                    sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
+                    //sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
                     item.deployed = true
                 } catch (e) {
                     println('ERROR : ' + e)
@@ -508,10 +508,14 @@ pipeline {
                     json.delivery.deployed = fullyDeployed
 
                     writeJSON json: json, file: 'delivery.json', pretty: 2
-
-                    sh "git add delivery.json"
-                    sh 'git commit -m "locking of this version"'
-                    sh "git push --set-upstream origin ${env.BRANCH_NAME}"
+                  	def git_configured_url = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
+				
+					withCredentials([usernamePassword(credentialsId: '45ba18de-ccb8-43fd-a84c-d9ac1f02a2f9', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+						sh "git add delivery.json"
+                    	sh 'git commit -m "locking of this version"'
+                      	repository = git_configured_url.replace("https://", "")
+                      	sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@' + repository)                      
+					}
                 }
             }
         }
