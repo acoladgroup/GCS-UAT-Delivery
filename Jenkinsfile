@@ -28,7 +28,7 @@ def deploySpring(item) {
             if (!params['Dry run ?']) {
                 println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
                 try {
-                    //sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
+                    sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
                     item.deployed = true
                 } catch (e) {
                     println('ERROR : ' + e)
@@ -41,6 +41,7 @@ def deploySpring(item) {
 
             item.status = 'OK'
         } catch (e) {
+			println('ERROR : ' + e)
             fullyDeployed = false
             item.status = 'IN ERROR : ' + e
         } finally {
@@ -105,6 +106,7 @@ def deployAdfApp(gcmAppName, item) {
 
         item.status = 'OK'
     } catch (e) {
+        println('ERROR : ' + e)
         fullyDeployed = false
         item.status = 'IN ERROR : ' + e
     } finally {
@@ -114,6 +116,10 @@ def deployAdfApp(gcmAppName, item) {
     }
 }
 
+/**
+ * Deploy the SOA MDS on BPM server
+ * @param item item to deploy
+ */
 def deploySoaMds(item) {
     println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
 
@@ -150,6 +156,76 @@ def deploySoaMds(item) {
 
         item.status = 'OK'
     } catch (e) {
+        println('ERROR : ' + e)
+        fullyDeployed = false
+        item.status = 'IN ERROR : ' + e
+    } finally {
+        dir(workingDirectory) {
+            // deleteDir()
+        }
+    }
+}
+
+/**
+ * Deploy the SOA composite
+ * @param item item to deploy
+ */
+def deploySoa(item) {
+    println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
+
+    try {
+        println("Download of " + item.group + ":" + item.name + ":" + item.version)
+        try {
+            sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar -DoutputDirectory=" + workingDirectory
+            sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan -DoutputDirectory=" + workingDirectory
+            item.downloaded = true
+        } catch (e) {
+            println('ERROR : ' + e)
+            item.downloaded = false
+            item.deployed = false
+            throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
+        }
+
+        if (!params['Dry run ?']) {
+            println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
+
+            // unzip configuration plan
+            unzipConfigplan(item)
+
+            // find config plan file name
+            def cfgPlan = findFiles(glob: "**/work/" + gcsEnvironment + "/*.xml")
+
+            if (cfgPlan.size() != 1) {
+                throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version)
+            }
+
+            def compositeName = "sca_" + cfgPlan[0].name.substring(0, (cfgPlan[0].name.length() - 12)) + "_rev" + item.version + ".jar"
+
+            println("compositeName : " + compositeName)
+
+            // Rename composite file to support the naming convention : https://support.oracle.com/epmos/faces/SearchDocDisplay?_adf.ctrl-state=11q3bv937b_9&_afrLoop=526667531616007#SYMPTOM
+            fileOperations([fileRenameOperation(destination: workingDirectory + '/' + compositeName, source: workingDirectory + '/' + item.name + '-' + item.version + '.jar')])
+
+            def stdoutResult = sh(returnStdout: true, script: "./scripts/deploySoa.sh " + workingDirectory + "/" + compositeName + " " + workingDirectory + "/" + gcsEnvironment + "/" + cfgPlan[0].name).trim()
+
+            println("************ Result of SOA deployment  **************")
+            println(stdoutResult)
+            println("**************************************************************")
+
+            // Test the english message for linux deployment and the french message for windows deployment
+            if (!(stdoutResult.contains("Deploying composite success") || stdoutResult.contains("----> Le composite a "))) {
+                item.deployed = false
+                throw new Exception("Can't deploy the SOA " + item.group + ":" + item.name + ":" + item.version)
+            }
+
+            item.deployed = true
+        } else {
+            item.deployed = false
+        }
+
+        item.status = 'OK'
+    } catch (e) {
+        println('ERROR : ' + e)
         fullyDeployed = false
         item.status = 'IN ERROR : ' + e
     } finally {
@@ -325,6 +401,17 @@ def buildHTMLReport(items) {
     }
     html+='</fieldset><hr/>'
 
+    // Display SOA deployment result
+    html += '<fieldset>'
+    html += '<legend>SOA</legend>'
+
+    if (items.delivery.soa != null && items.delivery.soa.size() == 0){
+        html += '<span>No artifacts found for this version</span>'
+    } else {
+        html += buildTable(items.delivery.soa);
+    }
+    html+='</fieldset><hr/>'
+
     // Display Spring services deployment result
     html += '<fieldset>'
     html += '<legend>Spring services</legend>'
@@ -398,7 +485,7 @@ pipeline {
             }
         }
         stage('Deploy GCM APP') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_app.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_app) {
@@ -413,7 +500,7 @@ pipeline {
             }
         }
         stage('Deploy GCSAccounts') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_accounts.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_accounts) {
@@ -428,7 +515,7 @@ pipeline {
             }
         }
         stage('Deploy DMWS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_dmws.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_dmws) {
@@ -443,7 +530,7 @@ pipeline {
             }
         }
         stage('Deploy DMRESTWS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_dmrestws.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_dmrestws) {
@@ -458,7 +545,7 @@ pipeline {
             }
         }
         stage('Deploy PMWS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_pmws.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_pmws) {
@@ -473,7 +560,7 @@ pipeline {
             }
         }
         stage('Deploy SOA MDS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.soa_mds.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.soa_mds) {
@@ -487,8 +574,23 @@ pipeline {
                 }
             }
         }
+        stage('Deploy SOA') {
+            when { expression {!json.delivery.deployed && json.delivery.soa.size() != 0} }
+            steps {
+                script {
+                    for (String item : json.delivery.soa) {
+                        if (!item.deployed) {
+                            deploySoa(item)
+                        } else {
+                            println ("Component already deployed. Nothing to do")
+                            item.redeployedStatus = true
+                        }
+                    }
+                }
+            }
+        }
         stage('Deploy Spring component') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release')} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.spring.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.spring) {
