@@ -10,11 +10,16 @@
 ###########################################################################################
 
 # Check for input arguments
-if [[ "$1" == "PMWS" ] && [ "$#" -ne 2 ]] || [ "$#" -ne 3 ]; then
-	echo "Usage: ./deployApp.sh <APP_NAME> <EAR_FILE> <CONFIG_PLAN>"
-	echo "EAR file not deployed"
-	exit -1
+if [ "$1" == "PMWS" ] && [ "$#" -ne 2 ]; then
+        echo "Usage: ./deployApp.sh <APP_NAME> <EAR_FILE>"
+        echo "EAR file not deployed"
+        exit -1
+elif [ "$1" != "PMWS" ] && [ "$#" -ne 3 ]; then
+        echo "Usage: ./deployApp.sh <APP_NAME> <EAR_FILE> <CONFIG_PLAN>"
+        echo "EAR file not deployed"
+        exit -1
 fi
+
 
 echo "## Deploy a new version of the application ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
