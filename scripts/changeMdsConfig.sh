@@ -19,5 +19,5 @@ echo "## Update the MDS configuration ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
 echo "##environment loaded ##"
 
-java weblogic.WLST ./scripts/changeMdsConfig.py %1
+java weblogic.WLST ./scripts/changeMdsConfig.py $1
 echo "## Update finished ##"
