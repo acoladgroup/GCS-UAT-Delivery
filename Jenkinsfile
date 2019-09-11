@@ -478,10 +478,11 @@ pipeline {
       	ORACLE_HOME = "/home/oracle/12.2.1.0/infra/"
     }
     stages {
-      	stage('Give Executable Permission') {
+      	stage('Prepare Scripts') {
             steps {
                 script {
                     sh "chmod +x ./scripts/*.sh"
+                  	sh "sed -i 's/\r//' *.sh"
                 }
             }
         }
