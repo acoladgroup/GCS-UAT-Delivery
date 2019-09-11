@@ -25,7 +25,7 @@ echo "## Deploy a new version of the application ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
 echo "##environment loaded ##"
 
-if [ "$1" != "PMWS" ]; then
+if [ "$1" == "PMWS" ]; then
 	. ./scripts/setBpmServerConfig.sh
 else
 	. ./scripts/setAdfServerConfig.sh
