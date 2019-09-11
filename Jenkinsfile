@@ -475,6 +475,7 @@ pipeline {
     }
     environment {
         JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
+      	ORACLE_HOME = "/home/oracle/12.2.1.0/infra/"
     }
     stages {
       	stage('Give Executable Permission') {
