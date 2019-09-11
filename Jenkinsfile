@@ -482,7 +482,7 @@ pipeline {
             steps {
                 script {
                     sh "chmod +x ./scripts/*.sh"
-                  	sh "sed -i 's/\r//' *.sh"
+                  	sh "sed -i 's/\r//' ./scripts/*.sh"
                 }
             }
         }
