@@ -31,10 +31,10 @@ else
 	. ./scripts/setAdfServerConfig.sh
 fi
 	
-if [ "$1" != "PMWS" ]; then
-	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -upload
+if [ "$1" == "PMWS" ]; then
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_LOGIN -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets $TARGET -upload
 else
-	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -plan $3 -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_LOGIN -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets $TARGET -plan $3 -upload
 fi
 
 echo "## End deployment ##"
