@@ -161,7 +161,7 @@ def deploySoaMds(item) {
         item.status = 'IN ERROR : ' + e
     } finally {
         dir(workingDirectory) {
-            // deleteDir()
+            deleteDir()
         }
     }
 }
@@ -230,7 +230,7 @@ def deploySoa(item) {
         item.status = 'IN ERROR : ' + e
     } finally {
         dir(workingDirectory) {
-            // deleteDir()
+            deleteDir()
         }
     }
 }
