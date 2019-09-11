@@ -477,6 +477,13 @@ pipeline {
         JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
     }
     stages {
+      	stage('Give Executable Permission') {
+            steps {
+                script {
+                    sh "chmod +x ./scripts/*.sh"
+                }
+            }
+        }
         stage('Read delivery file') {
             steps {
                 script {
