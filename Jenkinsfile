@@ -471,7 +471,7 @@ def buildTable(listOfItems) {
 pipeline {
     agent  { node { label 'alt' } }
     parameters {
-        booleanParam(name: "Dry run ?", description: 'Be carefull, you will deploy this version on TEST environment', defaultValue: true)
+        booleanParam(name: "Dry run ?", description: 'Be carefull, you will deploy this version on UAT environment', defaultValue: true)
     }
     environment {
         JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
@@ -485,7 +485,7 @@ pipeline {
             }
         }
         stage('Deploy GCM APP') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_app.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_app != null && json.delivery.adf_app.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_app) {
@@ -500,7 +500,7 @@ pipeline {
             }
         }
         stage('Deploy GCSAccounts') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_accounts.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_accounts != null && json.delivery.adf_accounts.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_accounts) {
@@ -515,7 +515,7 @@ pipeline {
             }
         }
         stage('Deploy DMWS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_dmws.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_dmws != null && json.delivery.adf_dmws.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_dmws) {
@@ -530,7 +530,7 @@ pipeline {
             }
         }
         stage('Deploy DMRESTWS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_dmrestws.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_dmrestws != null && json.delivery.adf_dmrestws.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_dmrestws) {
@@ -545,7 +545,7 @@ pipeline {
             }
         }
         stage('Deploy PMWS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_pmws.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.adf_pmws != null && json.delivery.adf_pmws.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.adf_pmws) {
@@ -560,7 +560,7 @@ pipeline {
             }
         }
         stage('Deploy SOA MDS') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.soa_mds.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.soa_mds != null && json.delivery.soa_mds.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.soa_mds) {
@@ -575,7 +575,7 @@ pipeline {
             }
         }
         stage('Deploy SOA') {
-            when { expression {!json.delivery.deployed && json.delivery.soa.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.soa != null && json.delivery.soa.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.soa) {
@@ -590,7 +590,7 @@ pipeline {
             }
         }
         stage('Deploy Spring component') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.spring.size() != 0} }
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.spring != null && json.delivery.spring.size() != 0} }
             steps {
                 script {
                     for (String item : json.delivery.spring) {
