@@ -27,9 +27,9 @@ else
 fi
 	
 if [ "$1" != "PMWS" ] then
-	java -classpath /gcm/product/12.2.1.0/mw/gcm/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -upload
 else
-	java -classpath /gcm/product/12.2.1.0/mw/gcm/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -plan $3 -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -plan $3 -upload
 fi
 
 echo "## End deployment ##"
