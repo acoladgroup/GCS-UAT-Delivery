@@ -10,7 +10,7 @@
 ###########################################################################################
 
 # Check for input arguments
-if [[ "$1" == "PMWS" ] && [ "$#" -ne 2 ]] || [ "$#" -ne 3 ] then
+if [[ "$1" == "PMWS" ] && [ "$#" -ne 2 ]] || [ "$#" -ne 3 ]; then
 	echo "Usage: ./deployApp.sh <APP_NAME> <EAR_FILE> <CONFIG_PLAN>"
 	echo "EAR file not deployed"
 	exit -1
@@ -20,13 +20,13 @@ echo "## Deploy a new version of the application ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
 echo "##environment loaded ##"
 
-if [ "$1" != "PMWS" ] then
+if [ "$1" != "PMWS" ]; then
 	. ./scripts/setBpmServerConfig.sh
 else
 	. ./scripts/setAdfServerConfig.sh
 fi
 	
-if [ "$1" != "PMWS" ] then
+if [ "$1" != "PMWS" ]; then
 	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -upload
 else
 	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_USER_NAME -password $ADMIN_PASSWORD -redeploy -name $1 -source $S2 -targets gcm_cluster -plan $3 -upload
