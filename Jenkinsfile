@@ -15,7 +15,7 @@ def deploySpring(item) {
         try {
             println("Download of " + item.group + ":" + item.name + ":" + item.version)
             try {
-                //sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":war -DoutputDirectory=" + workingDirectory
+                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":war -DoutputDirectory=" + workingDirectory
 
                 item.downloaded = true
             } catch (e) {
