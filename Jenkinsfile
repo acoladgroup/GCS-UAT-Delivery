@@ -475,7 +475,7 @@ pipeline {
     }
     environment {
         JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
-      	ORACLE_HOME = "/home/oracle/12.2.1.0/infra/"
+      	ORACLE_HOME = "/home/jenkins/oracle/12.2.1.3/mw/bpm"
     }
     stages {
       	stage('Prepare Scripts') {
