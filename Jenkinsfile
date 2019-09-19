@@ -247,6 +247,7 @@ def deploySoa(item) {
     try {
         println("Download of " + item.group + ":" + item.name + ":" + item.version)
         def cfgPlan
+		def compositeName
 
         try {
             withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
@@ -264,7 +265,7 @@ def deploySoa(item) {
                 throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version)
             }
 
-            def compositeName = "sca_" + cfgPlan[0].name.substring(0, (cfgPlan[0].name.length() - 12)) + "_rev" + item.version + ".jar"
+            compositeName = "sca_" + cfgPlan[0].name.substring(0, (cfgPlan[0].name.length() - 12)) + "_rev" + item.version + ".jar"
 
             println("compositeName : " + compositeName)
 
