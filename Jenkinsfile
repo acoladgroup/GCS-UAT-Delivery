@@ -632,7 +632,7 @@ def buildTable(listOfItems) {
 
 
 pipeline {
-    agent  { node { label 'slaveci13' } }
+    agent  { node { label 'slaveci11|slaveci12' } }
     parameters {
         booleanParam(name: "Dry run ?", description: 'Be carefull, you will deploy this version on UAT environment', defaultValue: true)
     }
