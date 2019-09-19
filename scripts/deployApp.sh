@@ -20,21 +20,15 @@ elif [ "$1" != "PMWS" ] && [ "$#" -ne 3 ]; then
         exit -1
 fi
 
-
 echo "## Deploy a new version of the application ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
+. ./scripts/setServerConfig.sh
 echo "##environment loaded ##"
-
-if [ "$1" == "PMWS" ]; then
-	. ./scripts/setBpmServerConfig.sh
-else
-	. ./scripts/setAdfServerConfig.sh
-fi
 	
 if [ "$1" == "PMWS" ]; then
-	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_LOGIN -password $ADMIN_PASSWORD -redeploy -name $1 -source $2 -targets $TARGET -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $BPM_ADMIN_URL -user $BPM_ADMIN_LOGIN -password $BPM_ADMIN_PASSWORD -redeploy -name $1 -source $2 -targets $BPM_TARGET -upload
 else
-	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADMIN_URL -user $ADMIN_LOGIN -password $ADMIN_PASSWORD -redeploy -name $1 -source $2 -targets $TARGET -plan $3 -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $APP_ADMIN_URL -user $APP_ADMIN_LOGIN -password $APP_ADMIN_PASSWORD -redeploy -name $1 -source $2 -targets $APP_TARGET -plan $3 -upload
 fi
 
 echo "## End deployment ##"

@@ -15,11 +15,10 @@ if [ "$#" -ne 2 ]; then
 	exit -1
 fi
 
-echo "## Deploy a retired application ##"
+echo "## Deploy SOA composite ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
+. ./scripts/setServerConfig.sh
 echo "##environment loaded ##"
 
-. ./scripts/setBpmServerConfig.sh
-
-java weblogic.WLST ./scripts/deploySoa.py $SOA_SERVER_URL $ADMIN_LOGIN $ADMIN_PASSWORD $1 $2
+java weblogic.WLST ./scripts/deploySoa.py $BPM_SOA_SERVER_URL $BPM_ADMIN_LOGIN $BPM_ADMIN_PASSWORD $1 $2
 echo "## SOA composite deployment finished ##"
