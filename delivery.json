@@ -1,13 +1,31 @@
 {"delivery": {
-    "deployed": false,
-    "spring":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
-        }
-    ]
-}}  
+  "deployed": false,
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjExYWIyNDBkNzE0MDY2NDM",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.euroscript.gcm.bpm",
+      "name": "gcm-soa-sapcustomer",
+      "version": "8.3.6.1-RC1"
+    }
+  ],
+  "angular":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjQ0OWY2NzFjOWQ1NTAyYjU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.app",
+      "name": "queenbee",
+      "version": "8.3.6.1-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmZiN2IxNzU2ZGNkZjVhNmU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.app",
+      "name": "hive",
+      "version": "8.3.6.1-RC1"
+    }
+  ]
+}}
