@@ -1,11 +1,14 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjNiOThiNmI0MGFiYjVlMmE",
     "repository": "gcm-release",
     "format": "maven2",
     "group": "com.euroscript.gcm.application",
     "name": "GCMApp",
-    "version": "8.3.6.0-RC4"
+    "version": "8.3.6.0-RC4",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }]
-}} 
+}}
