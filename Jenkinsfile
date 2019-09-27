@@ -675,7 +675,7 @@ def buildTable(listOfItems) {
 
 
 pipeline {
-    agent  { node { label 'slaveci13' } }
+    agent  { node { label 'alt' } }
     parameters {
         booleanParam(name: "Dry run ?", description: "Be careful, if you check this option the composite will be deployed", defaultValue: true)
     }
