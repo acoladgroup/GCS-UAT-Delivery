@@ -22,13 +22,14 @@ fi
 
 echo "## Deploy a new version of the application ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
-. ./scripts/setServerConfig.sh
+. ./scripts/serverInfo.properties
+
 echo "##environment loaded ##"
 	
 if [ "$1" == "PMWS" ]; then
-	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $BPM_ADMIN_URL -user $BPM_ADMIN_LOGIN -password $BPM_ADMIN_PASSWORD -redeploy -name $1 -source $2 -targets $BPM_TARGET -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADF_BPM_URL -user $ADF_BPM_LOGIN -password $ADF_BPM_PASSWORD -redeploy -name $1 -source $2 -targets $ADF_BPM_TARGET -upload
 else
-	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $APP_ADMIN_URL -user $APP_ADMIN_LOGIN -password $APP_ADMIN_PASSWORD -redeploy -name $1 -source $2 -targets $APP_TARGET -plan $3 -upload
+	java -classpath $ORACLE_HOME/wlserver/server/lib/weblogic.jar weblogic.Deployer -adminurl $ADF_APP_URL -user $ADF_APP_LOGIN -password $ADF_APP_PASSWORD -redeploy -name $1 -source $2 -targets $ADF_APP_TARGET -plan $3 -upload
 fi
 
 echo "## End deployment ##"

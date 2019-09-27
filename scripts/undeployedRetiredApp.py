@@ -1,29 +1,56 @@
-def undeploy_app(appName,targeinst):
-	print "Undeploying " + appName
-	undeploy(appName,targetinst)
+#=======================================================================================
+# Undeploy the retired version of the application
+#=======================================================================================
 
-connect(sys.argv[2],sys.argv[3],url=sys.argv[1])
-cd('AppDeployments')
-appList = ls(returnMap='true')
-print appList
-for appName in appList:
-	if appName.startswith(sys.argv[4] + '#'):
-		pwd()
+def undeployedRetiredVersion(serverInfoFile, appToUndeploy):
+	try:
+		print 'Loading Deployment config from :', serverInfoFile
+
+		loadProperties(serverInfoFile)
+
+		if appToUndeploy == 'PMWS':
+			connect(ADF_BPM_LOGIN, ADF_BPM_PASSWORD, ADF_BPM_URL)
+			print 'Check if ' +  appToUndeploy + " should be uninstalled from :", ADF_BPM_URL
+		else:
+			connect(ADF_APP_LOGIN, ADF_APP_PASSWORD, ADF_APP_URL)
+			print 'Check if ' +  appToUndeploy + " should be uninstalled from :", ADF_APP_URL
+		
+		cd('AppDeployments')
+		appList = ls(returnMap='true')
+
 		domainConfig()
-		cd ('/AppDeployments/'+appName+'/Targets')
-		mytargets = ls(returnMap='true')
-		domainRuntime()
-		cd('AppRuntimeStateRuntime')
-		cd('AppRuntimeStateRuntime')
-		for targetinst in mytargets:
-			currentAppStatus=cmo.getCurrentState(appName,targetinst)
-			print '=============================================================='
-			print '||' + appName
-			print '||' + targetinst
-			print '||' + currentAppStatus
-			print '============================================================== \n'
-			if currentAppStatus != 'STATE_ACTIVE':
-				print "This app is should be uninstalled \n"
-				undeploy_app(appName,targetinst)
-			else:
-				print "This app is the current version. Nothing to do \n"
+
+		for appName in appList:
+			if appName.startswith(appToUndeploy + '#'):
+				cd ('/AppDeployments/' + appName + '/Targets')
+				
+				mytargets = ls(returnMap='true')
+				domainRuntime()
+				cd('AppRuntimeStateRuntime/AppRuntimeStateRuntime')
+
+				for targetinst in mytargets:
+					currentAppStatus=cmo.getCurrentState(appName,targetinst)
+					print '=============================================================='
+					print '||' + appName + '||' + targetinst + '||' + currentAppStatus
+					print '============================================================== \n'
+					
+					if currentAppStatus != 'STATE_ACTIVE':
+						print "This app is should be uninstalled \n"
+						undeploy(appName,targetinst)
+					else:
+						print "This app is the current version. Nothing to do \n"
+	except:
+		print "Unexpected error:", sys.exc_info()[0]
+		raise
+
+# Script start point
+try:
+	# import the service bus configuration
+	# argv[1] is the export config properties file
+	# argv[2] is the name of the application to undeployed
+	undeployedRetiredVersion(sys.argv[1], sys.argv[2])
+
+except:
+	print "Unexpected error: ", sys.exc_info()[0]
+	dumpStack()
+	raise

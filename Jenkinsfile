@@ -1,61 +1,55 @@
+/**
+ * Content of Jenkinsfile.properties file
+ */
+props = null
+
+/**
+ * Working folder
+ */
 workingDirectory = './work'
-gcsEnvironment = 'UAT'
+
+/**
+ * Status of the deployment
+ */
 fullyDeployed = true
 
+/**
+ * Content of delivery.json file
+ */
 def json
+
+
+tomcatServer =  'si01tu-gcs-apps.amplexor.net'
+webappsPath = '/gcm/product/tomcat-service/webapps/'
 
 /**
  * Deploy the Spring application
  * @param item Nexus artifact
  */
 def deploySpring(item) {
-    println ("Item : " + item)
-
     if (!item.deployed) {
-        try {
-            println("Download of " + item.group + ":" + item.name + ":" + item.version)
-            try {
-                withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                    sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":war -DoutputDirectory=" + workingDirectory
+        displayManagementMessage(item)
 
-                    item.downloaded = true
-                }
-            } catch (e) {
-                println('ERROR : ' + e)
-                item.downloaded = false
-                item.deployed = false
-                throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
-            }
+        try {
+            item.downloaded = false
+            item.deployed = false
+
+            item.downloaded = downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":war")
 
             if (!params['Dry run ?']) {
-                println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
-                try {
-                    withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                        sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
-                        item.deployed = true
-                    }
-                } catch (e) {
-                    println('ERROR : ' + e)
-                    item.deployed = false
-                    throw new Exception("Can't deployed the artefact " + item.group + ":" + item.name + ":" + item.version)
-                }
-            } else {
-                item.deployed = false
+                deployToTomcat(item)
             }
 
-            item.status = 'OK'
+            displaySuccessMessage(item)
         } catch (e) {
-            println('ERROR : ' + e)
-            fullyDeployed = false
-            item.status = 'IN ERROR : ' + e
+            manageCatchedError(item, e)
         } finally {
             dir(workingDirectory) {
                 deleteDir()
             }
         }
     } else {
-        println ("Component already deployed. Nothing to do")
-        item.redeployedStatus = true
+        manageCompositeAlreadyDeployed(item)
     }
 }
 
@@ -64,53 +58,33 @@ def deploySpring(item) {
  * @param item Nexus artifact
  */
 def deployAngular(item) {
-    println ("Item : " + item)
-
     if (!item.deployed) {
-        try {
-            println("Download of " + item.group + ":" + item.name + ":" + item.version)
-            try {
-                withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                    sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":war -DoutputDirectory=" + workingDirectory
+        displayManagementMessage(item)
 
-                    item.downloaded = true
-                }
-            } catch (e) {
-                println('ERROR : ' + e)
-                item.downloaded = false
-                item.deployed = false
-                throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
-            }
+        try {
+            item.downloaded = false
+            item.deployed = false
+
+            item.downloaded = downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":war")
 
             if (!params['Dry run ?']) {
-                println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
-                try {
-                    withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                        sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
-                        item.deployed = true
-                    }
-                } catch (e) {
-                    println('ERROR : ' + e)
-                    item.deployed = false
-                    throw new Exception("Can't deployed the artefact " + item.group + ":" + item.name + ":" + item.version)
-                }
-            } else {
-                item.deployed = false
+                deployToTomcat(item)
+
+                copyJsConfigFile(item)
+
+                item.deployed = true
             }
 
-            item.status = 'OK'
+            displaySuccessMessage(item)
         } catch (e) {
-            println('ERROR : ' + e)
-            fullyDeployed = false
-            item.status = 'IN ERROR : ' + e
+            manageCatchedError(item, e)
         } finally {
             dir(workingDirectory) {
-                deleteDir()
+                // deleteDir()
             }
         }
     } else {
-        println ("Component already deployed. Nothing to do")
-        item.redeployedStatus = true
+        manageCompositeAlreadyDeployed(item)
     }
 }
 
@@ -120,68 +94,56 @@ def deployAngular(item) {
  * @param item Nexus artifact
  */
 def deployAdfApp(gcmAppName, item) {
-    println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
+    if (!item.deployed) {
+        displayManagementMessage(item)
 
-    try {
-        println("Download of " + item.group + ":" + item.name + ":" + item.version)
         try {
-            withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":ear -DoutputDirectory=" + workingDirectory
+            item.downloaded = false
+            item.deployed = false
 
-                if (gcmAppName != 'PMWS') {
-                    sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan -DoutputDirectory=" + workingDirectory
-                }
-            }
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":ear")
 
-
-            // Handle ORA MDS configuration (only for the GCM application)
-            if (gcmAppName == 'GCM') {
-                changeMDSConfiguration(item)
-            }
-
-            // Unzip config plan archive. No config plan for PMWS
+            // Download and unzip config plan archive. No config plan for PMWS
             if (gcmAppName != 'PMWS') {
+                downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan")
+
                 unzipConfigplan(item)
 
                 // find config plan file name
-                def cfgPlan = findFiles(glob: "**/work/" + gcsEnvironment + "/" + gcmAppName + "-plan.xml")
+                def cfgPlan = findFiles(glob: "**/work/" + props.gcsEnvironment + "/" + gcmAppName + "-plan.xml")
 
                 if (cfgPlan.size() != 1) {
-                    throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version)
+                    throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version + " for the environment:" + props.gcsEnvironment)
                 }
             }
 
             item.downloaded = true
+
+            if (!params['Dry run ?']) {
+                // Handle ORA MDS configuration (only for the GCM application)
+                if (gcmAppName == 'GCM') {
+                    changeMDSConfiguration(item)
+                }
+
+                // Undeploy the previous version
+                undeployedRetiredApp(gcmAppName, item)
+
+                // deploy the application
+                deployApp(gcmAppName, item)
+
+                item.deployed = true
+            }
+
+            displaySuccessMessage(item)
         } catch (e) {
-            println('ERROR : ' + e)
-            item.downloaded = false
-            item.deployed = false
-            throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
+            manageCatchedError(item, e)
+        } finally {
+            dir(workingDirectory) {
+                deleteDir()
+            }
         }
-
-        if (!params['Dry run ?']) {
-            println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
-
-            // Undeploy the previous version
-            undeployedRetiredApp(gcmAppName, item)
-
-            // deploy the application
-            deployApp(gcmAppName, item)
-
-            item.deployed = true
-        } else {
-            item.deployed = false
-        }
-
-        item.status = 'OK'
-    } catch (e) {
-        println('ERROR : ' + e)
-        fullyDeployed = false
-        item.status = 'IN ERROR : ' + e
-    } finally {
-        dir(workingDirectory) {
-            deleteDir()
-        }
+    } else {
+        manageCompositeAlreadyDeployed(item)
     }
 }
 
@@ -190,50 +152,42 @@ def deployAdfApp(gcmAppName, item) {
  * @param item item to deploy
  */
 def deploySoaMds(item) {
-    println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
+    if (!item.deployed) {
+        displayManagementMessage(item)
 
-    try {
-        println("Download of " + item.group + ":" + item.name + ":" + item.version)
         try {
-            withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar -DoutputDirectory=" + workingDirectory
-                item.downloaded = true
-            }
-        } catch (e) {
-            println('ERROR : ' + e)
             item.downloaded = false
             item.deployed = false
-            throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
-        }
 
-        if (!params['Dry run ?']) {
-            println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":jar")
 
-            def stdoutResult = sh(returnStdout: true, script: "./scripts/deployMds.sh " + workingDirectory + "/" + item.name + "-" + item.version + ".jar").trim()
+            if (!params['Dry run ?']) {
+                println("SOAMDS deployment of " + item.group + ":" + item.name + ":" + item.version)
 
-            println("************ Result of SOAMDS deployment  **************")
-            println(stdoutResult)
-            println("**************************************************************")
+                def stdoutResult = sh(returnStdout: true, script: "./scripts/deployMds.sh " + workingDirectory + "/" + item.name + "-" + item.version + ".jar").trim()
 
-            if (!stdoutResult.contains("Operation \"importMetadata\" completed")) {
-                item.deployed = false
-                throw new Exception("Can't deploy the SOAMDS " + item.group + ":" + item.name + ":" + item.version)
+                println("************ Result of SOAMDS deployment  **************")
+                println(stdoutResult)
+                println("********************************************************")
+
+                if (!stdoutResult.contains("Operation \"importMetadata\" completed")) {
+                    item.deployed = false
+                    throw new Exception("Can't deploy the SOAMDS " + item.group + ":" + item.name + ":" + item.version)
+                }
+
+                item.deployed = true
             }
 
-            item.deployed = true
-        } else {
-            item.deployed = false
+            displaySuccessMessage(item)
+        } catch (e) {
+            manageCatchedError(item, e)
+        } finally {
+            dir(workingDirectory) {
+                deleteDir()
+            }
         }
-
-        item.status = 'OK'
-    } catch (e) {
-        println('ERROR : ' + e)
-        fullyDeployed = false
-        item.status = 'IN ERROR : ' + e
-    } finally {
-        dir(workingDirectory) {
-            deleteDir()
-        }
+    } else {
+        manageCompositeAlreadyDeployed(item)
     }
 }
 
@@ -242,72 +196,58 @@ def deploySoaMds(item) {
  * @param item item to deploy
  */
 def deploySoa(item) {
-    println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
-
-    try {
-        println("Download of " + item.group + ":" + item.name + ":" + item.version)
-        def cfgPlan
-		def compositeName
+    if (!item.deployed) {
+        displayManagementMessage(item)
 
         try {
-            withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar -DoutputDirectory=" + workingDirectory
-                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan -DoutputDirectory=" + workingDirectory
-            }
+            item.downloaded = false
+            item.deployed = false
+
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":jar")
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan")
 
             // unzip configuration plan
             unzipConfigplan(item)
 
             // find config plan file name
-            cfgPlan = findFiles(glob: "**/work/" + gcsEnvironment + "/*.xml")
+            def cfgPlan = findFiles(glob: "**/work/" + props.gcsEnvironment + "/*.xml")
 
             if (cfgPlan.size() != 1) {
-                throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version)
+                throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version + " for the environment:" + props.gcsEnvironment)
             }
 
-            compositeName = "sca_" + cfgPlan[0].name.substring(0, (cfgPlan[0].name.length() - 12)) + "_rev" + item.version + ".jar"
-
-            println("compositeName : " + compositeName)
+            def compositeName = "sca_" + cfgPlan[0].name.substring(0, (cfgPlan[0].name.length() - 12)) + "_rev" + item.version + ".jar"
 
             // Rename composite file to support the naming convention : https://support.oracle.com/epmos/faces/SearchDocDisplay?_adf.ctrl-state=11q3bv937b_9&_afrLoop=526667531616007#SYMPTOM
             fileOperations([fileRenameOperation(destination: workingDirectory + '/' + compositeName, source: workingDirectory + '/' + item.name + '-' + item.version + '.jar')])
 
             item.downloaded = true
-        } catch (e) {
-            println('ERROR : ' + e)
-            item.downloaded = false
-            item.deployed = false
-            throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
-        }
 
-        if (!params['Dry run ?']) {
-            println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
-            
-            def stdoutResult = sh(returnStdout: true, script: "./scripts/deploySoa.sh " + workingDirectory + "/" + compositeName + " " + workingDirectory + "/" + gcsEnvironment + "/" + cfgPlan[0].name).trim()
+            if (!params['Dry run ?']) {
+                def stdoutResult = sh(returnStdout: true, script: "./scripts/deploySoa.sh " + workingDirectory + "/" + compositeName + " " + workingDirectory + "/" + props.gcsEnvironment + "/" + cfgPlan[0].name).trim()
 
-            println("************ Result of SOA deployment  **************")
-            println(stdoutResult)
-            println("**************************************************************")
+                println("************   Result of SOA deployment   **************")
+                println(stdoutResult)
+                println("********************************************************")
 
-            if (!stdoutResult.contains("Deploying composite success")) {
-                item.deployed = false
-                throw new Exception("Can't deploy the SOA " + item.group + ":" + item.name + ":" + item.version)
+                if (!stdoutResult.contains("Deploying composite success")) {
+                    item.deployed = false
+                    throw new Exception("Can't deploy the SOA " + item.group + ":" + item.name + ":" + item.version)
+                }
+
+                item.deployed = true
             }
 
-            item.deployed = true
-        } else {
-            item.deployed = false
+            displaySuccessMessage(item)
+        } catch (e) {
+            manageCatchedError(item, e)
+        } finally {
+            dir(workingDirectory) {
+                deleteDir()
+            }
         }
-
-        item.status = 'OK'
-    } catch (e) {
-        println('ERROR : ' + e)
-        fullyDeployed = false
-        item.status = 'IN ERROR : ' + e
-    } finally {
-        dir(workingDirectory) {
-            deleteDir()
-        }
+    } else {
+        manageCompositeAlreadyDeployed(item)
     }
 }
 
@@ -316,64 +256,53 @@ def deploySoa(item) {
  * @param item item to deploy
  */
 def deployOsb(item) {
-    println ("Deployment of the artifact : " + item.group + ":" + item.name + ":" + item.version)
-
-    try {
-        println("Download of " + item.group + ":" + item.name + ":" + item.version)
-        def cfgPlan
+    if (!item.deployed) {
+        displayManagementMessage(item)
 
         try {
-            withMaven(mavenSettingsConfig: 'GCS-MDW-settings') {
-                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":sbar -DoutputDirectory=" + workingDirectory
-                sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan -DoutputDirectory=" + workingDirectory
-
-                item.downloaded = true
-
-                // unzip configuration plan
-                unzipConfigplan(item)
-
-                // find config plan file name
-                cfgPlan = findFiles(glob: "**/work/" + gcsEnvironment + "/*.xml")
-
-                if (cfgPlan.size() != 1) {
-                    throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version)
-                }
-            }
-        } catch (e) {
-            println('ERROR : ' + e)
             item.downloaded = false
             item.deployed = false
-            throw new Exception("Can't find the artefact " + item.group + ":" + item.name + ":" + item.version)
-        }
 
-        if (!params['Dry run ?']) {
-            println("Deployment of " + item.group + ":" + item.name + ":" + item.version)
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":sbar")
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":jar:cfgplan")
 
-            def stdoutResult = sh(returnStdout: true, script: "./scripts/deployOsb.sh " + workingDirectory + "/" + item.name + "-" + item.version + ".sbar " + workingDirectory + "/" + gcsEnvironment + "/" + cfgPlan[0].name).trim()
+            // unzip configuration plan
+            unzipConfigplan(item)
 
-            println("************ Result of OSB deployment  **************")
-            println(stdoutResult)
-            println("**************************************************************")
+            // find config plan file name
+            cfgPlan = findFiles(glob: "**/work/" + props.gcsEnvironment + "/*.xml")
 
-            if (!stdoutResult.contains("Deployment of " + workingDirectory + "/" + item.name + "-" + item.version + ".sbar successful")) {
-                item.deployed = false
-                throw new Exception("Can't deploy the OSB " + item.group + ":" + item.name + ":" + item.version)
+            if (cfgPlan.size() != 1) {
+                throw new Exception("Configuration plan not found for " + item.group + ":" + item.name + ":" + item.version + " for the environment:" + props.gcsEnvironment)
             }
 
-            item.deployed = true
-        } else {
-            item.deployed = false
-        }
+            item.downloaded = true
 
-        item.status = 'OK'
-    } catch (e) {
-        println('ERROR : ' + e)
-        fullyDeployed = false
-        item.status = 'IN ERROR : ' + e
-    } finally {
-        dir(workingDirectory) {
-            deleteDir()
+            if (!params['Dry run ?']) {
+                def stdoutResult = sh(returnStdout: true, script: "./scripts/deployOsb.sh " + workingDirectory + "/" + item.name + "-" + item.version + ".sbar " + workingDirectory + "/" + props.gcsEnvironment + "/" + cfgPlan[0].name).trim()
+
+                println("************   Result of OSB deployment   **************")
+                println(stdoutResult)
+                println("********************************************************")
+
+                if (!stdoutResult.contains("Deployment of " + workingDirectory + "/" + item.name + "-" + item.version + ".sbar successful")) {
+                    item.deployed = false
+                    throw new Exception("Can't deploy the OSB " + item.group + ":" + item.name + ":" + item.version)
+                }
+
+                item.deployed = true
+            }
+
+            displaySuccessMessage(item)
+        } catch (e) {
+            manageCatchedError(item, e)
+        } finally {
+            dir(workingDirectory) {
+                deleteDir()
+            }
         }
+    } else {
+        manageCompositeAlreadyDeployed(item)
     }
 }
 
@@ -421,13 +350,55 @@ def undeployedRetiredApp(gcmAppName, item) {
 }
 
 /**
+ * Download a nexus artifact
+ * @param artifactId item to download
+ * @return True if the download works
+ */
+def downloadArtifact(artifactId) {
+    println("#####     Download of " + artifactId + "     ######")
+
+    withMaven(mavenSettingsConfig: props.mavenSettingsConfig) {
+        sh "mvn org.apache.maven.plugins:maven-dependency-plugin:3.1.1:copy -Dartifact=" + artifactId + " -DoutputDirectory=" + workingDirectory
+    }
+
+    return true
+}
+
+/**
+ * Deploy item to tomcat server
+ * @param item item to deployed
+ */
+def deployToTomcat(item) {
+    displayDeployMessage(item)
+
+    withMaven(mavenSettingsConfig: 'GCS-settings') {
+        sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
+    }
+}
+
+/**
+ * Copy the js file to the webapp
+ * @param item item
+ */
+def copyJsConfigFile(item) {
+    def stdoutResult = sh(returnStdout: true, script: "scp -p ./resources/angular/" + props.gcsEnvironment + "/" + item.name + "-config.js tomcat@" + props.angularHost + ":" + webappsPath + item.name + "/").trim()
+
+    println("#####        Result of SCP " + item.group + ":" + item.name + ":" + item.version + "         ######")
+    println(stdoutResult)
+    println("########################################################################################################################")
+
+    if (!(stdoutResult.contains(item.name + "-config.js") && stdoutResult.contains("100%"))) {
+        item.deployed = false
+        throw new Exception("Can't copy js file for " + item.group + ":" + item.name + ":" + item.version + " on " + props.angularHost + ":" + webappsPath + item.name + "/")
+    }
+}
+
+/**
  * Unzip the config plan zip
  * @param item item to unzip
  * @return
  */
 def unzipConfigplan(item) {
-    println("Unzip config plan")
-
     try {
         unzip zipFile: workingDirectory + '/' + item.name + '-' + item.version + '-cfgplan.jar', dir: workingDirectory
     } catch (e) {
@@ -443,9 +414,13 @@ def unzipConfigplan(item) {
  * @param item item to deploy
  */
 def deployApp(gcmAppName, item) {
-    println("Deploy of " + gcmAppName)
+    println("Deployment of " + gcmAppName)
 
-    stdoutResult = sh(returnStdout: true, script: "./scripts/deployApp.sh " + gcmAppName + " ./work/" + item.name + "-" + item.version + ".ear ./work/" + gcsEnvironment + "/" + gcmAppName + "-plan.xml")
+    if (gcmAppName == 'PMWS') {
+        stdoutResult = sh(returnStdout: true, script: "./scripts/deployApp.sh " + gcmAppName + " ./work/" + item.name + "-" + item.version + ".ear")
+    } else {
+        stdoutResult = sh(returnStdout: true, script: "./scripts/deployApp.sh " + gcmAppName + " ./work/" + item.name + "-" + item.version + ".ear ./work/" + props.gcsEnvironment + "/" + gcmAppName + "-plan.xml")
+    }
 
     println("************** Result of deploy the EAR file *****************")
     println(stdoutResult)
@@ -457,6 +432,73 @@ def deployApp(gcmAppName, item) {
     }
 }
 
+/**
+ * Display deployment message
+ * @param item item
+ */
+def displayManagementMessage(item) {
+    println("########################################################################################################################")
+    println("#                   Management of " + item.group + ":" + item.name + ":" + item.version)
+    println("########################################################################################################################")
+}
+
+/**
+ * Display deployment message
+ * @param item item
+ */
+def displayDeployMessage(item) {
+    println("#####     Deployment of " + item.group + ":" + item.name + ":" + item.version + "     ######")
+}
+
+/**
+ * Display success message
+ * @param item item
+ */
+def displaySuccessMessage(item) {
+    item.status = 'OK'
+
+    println("########################################################################################################################")
+    println("#         " + item.group + ":" + item.name + ":" + item.version + " has been deployed with success")
+    println("########################################################################################################################")
+}
+
+/**
+ * Mange composite already deployed
+ * @param item
+ * @return
+ */
+def manageCompositeAlreadyDeployed (item) {
+    item.redeployedStatus = true
+
+    println("################    " + item.group + ":" + item.name + ":" + item.version + " is already deployed     ################")
+}
+
+def manageCatchedError (item, error) {
+    fullyDeployed = false
+
+    println('ERROR : ' + error)
+    println("########################################################################################################################")
+    println("          An error occurs during the deployment of " + item.group + ":" + item.name + ":" + item.version)
+    println("########################################################################################################################")
+
+    if (item.downloaded) {
+        item.status = "IN ERROR: Can't deployed the artefact " + item.group + ":" + item.name + ":" + item.version
+    } else {
+        item.status = "IN ERROR: Can't download the artefact " + item.group + ":" + item.name + ":" + item.version
+    }
+}
+
+/**
+ * check if the properties exists
+ * @param props Array of values
+ * @param propertyName Name of the property
+ */
+def checkProperties(props, propertyName) {
+    if (props == null || props[propertyName] == null) {
+        println("ERROR Property + " + propertyName + " not found")
+        throw new Exception("Property + " + propertyName + " not found")
+    }
+}
 /**
  * Build the HTML report
  * @param items list of items deployed
@@ -633,20 +675,31 @@ def buildTable(listOfItems) {
 
 
 pipeline {
-    agent  { node { label 'alt' } }
+    agent  { node { label 'slaveci13' } }
     parameters {
-        booleanParam(name: "Dry run ?", description: 'Be carefull, you will deploy this version on UAT environment', defaultValue: true)
+        booleanParam(name: "Dry run ?", description: "Be careful, if you check this option the composite will be deployed", defaultValue: true)
     }
     environment {
-        JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
-      	ORACLE_HOME = "/home/jenkins/oracle/12.2.1.3/mw/bpm"
+        JAVA_HOME = "/home/azurejenkins/tools/jdk1.8.0_221"
+        ORACLE_HOME = "/home/azurejenkins/product/12.2.1.3/mw/bpm"
     }
     stages {
         stage('Prepare scripts') {
             steps {
                 script {
-                    // bat "sed -i 's/\r//' ./scripts/*.sh"
                     sh "chmod +x ./scripts/*.sh"
+                }
+            }
+        }
+        stage('Read Jenkinsfile properties') {
+            steps {
+                script {
+                    props = readProperties file: 'Jenkinsfile.properties'
+
+                    checkProperties(props, 'gcsEnvironment')
+                    checkProperties(props, 'mavenSettingsConfig')
+                    checkProperties(props, 'gitCredentialsId')
+                    checkProperties(props, 'angularHost')
                 }
             }
         }
@@ -662,12 +715,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.adf_app) {
-                        if (!item.deployed) {
-                            deployAdfApp('GCM', item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deployAdfApp('GCM', item)
                     }
                 }
             }
@@ -677,12 +725,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.adf_accounts) {
-                        if (!item.deployed) {
-                            deployAdfApp('GCSAccounts', item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deployAdfApp('GCSAccounts', item)
                     }
                 }
             }
@@ -692,12 +735,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.adf_dmws) {
-                        if (!item.deployed) {
-                            deployAdfApp('DMWS', item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deployAdfApp('DMWS', item)
                     }
                 }
             }
@@ -707,12 +745,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.adf_dmrestws) {
-                        if (!item.deployed) {
-                            deployAdfApp('DMRESTWS', item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deployAdfApp('DMRESTWS', item)
                     }
                 }
             }
@@ -722,12 +755,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.adf_pmws) {
-                        if (!item.deployed) {
-                            deployAdfApp('PMWS', item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deployAdfApp('PMWS', item)
                     }
                 }
             }
@@ -737,12 +765,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.soa_mds) {
-                        if (!item.deployed) {
-                            deploySoaMds(item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deploySoaMds(item)
                     }
                 }
             }
@@ -752,12 +775,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.soa) {
-                        if (!item.deployed) {
-                            deploySoa(item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deploySoa(item)
                     }
                 }
             }
@@ -767,12 +785,7 @@ pipeline {
             steps {
                 script {
                     for (String item : json.delivery.osb) {
-                        if (!item.deployed) {
-                            deployOsb(item)
-                        } else {
-                            println ("Component already deployed. Nothing to do")
-                            item.redeployedStatus = true
-                        }
+                        deployOsb(item)
                     }
                 }
             }
@@ -819,7 +832,7 @@ pipeline {
                     writeJSON json: json, file: 'delivery.json', pretty: 2
                     def git_configured_url = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
 
-                    withCredentials([usernamePassword(credentialsId: '45ba18de-ccb8-43fd-a84c-d9ac1f02a2f9', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: props.gitCredentialsId, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh "git add delivery.json"
                         sh 'git commit -m "locking of this version"'
                         repository = git_configured_url.replace("https://", "")

@@ -30,15 +30,12 @@ def deployOsb(serverInfoFile, osbSbar, osbCustomizationFile):
 	try:
 		SessionMBean = None
 		print 'Loading Deployment config from :', serverInfoFile
-		exportConfigProp = loadProps(serverInfoFile)
-		
-		adminUrl = exportConfigProp.get("osbAdminUrl")
-		adminUser = exportConfigProp.get("osbAdminUser")
-		adminPassword = exportConfigProp.get("osbAdminPassword")
-		
-		connectToServer(adminUser, adminPassword, adminUrl)
+		loadProperties(serverInfoFile)
 
-		print 'Deployment of  :', osbSbar, "on Admin Server listening on :", adminUrl
+		connect(OSB_BPM_LOGIN, OSB_BPM_PASSWORD, OSB_BPM_URL)
+		domainRuntime()
+
+		print 'Deployment of: ', osbSbar, " on Admin Server listening on: ", SOA_BPM_URL
 
 		theBytes = readBinaryFile(osbSbar)
 		print 'Read file', osbSbar
@@ -149,24 +146,6 @@ def printDiagMap(map):
 	print
 
 #=======================================================================================
-# Utility function to load properties from a config file
-#=======================================================================================
-
-def loadProps(configPropFile):
-	propInputStream = FileInputStream(configPropFile)
-	configProps = Properties()
-	configProps.load(propInputStream)
-	return configProps
-
-#=======================================================================================
-# Connect to the Admin Server
-#=======================================================================================
-
-def connectToServer(username, password, url):
-	connect(username, password, url)
-	domainRuntime()
-
-#=======================================================================================
 # Utility function to read a binary file
 #=======================================================================================
 def readBinaryFile(fileName):
@@ -192,7 +171,9 @@ def getSessionManagementMBean(sessionName):
 # IMPORT script init
 try:
 	# import the service bus configuration
-	# argv[1] is the export config properties file
+	# argv[1] is the config properties file
+	# argv[2] is the OSB file
+	# argv[3] is the OSB customization file
 	deployOsb(sys.argv[1], sys.argv[2], sys.argv[3])
 
 except:

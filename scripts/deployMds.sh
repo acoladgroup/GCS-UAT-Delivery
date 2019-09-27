@@ -16,8 +16,7 @@ fi
 
 echo "## Deploy a retired application ##"
 . $ORACLE_HOME/wlserver/server/bin/setWLSEnv.sh
-. ./scripts/setServerConfig.sh
 echo "##environment loaded ##"
 
-java weblogic.WLST ./scripts/deployMds.py $BPM_ADMIN_URL $BPM_ADMIN_LOGIN $BPM_ADMIN_PASSWORD $1
+java weblogic.WLST ./scripts/deployMds.py ./scripts/serverInfo.properties $1
 echo "## MDS deployment finished ##"

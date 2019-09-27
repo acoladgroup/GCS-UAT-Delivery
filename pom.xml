@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.amplexor.gcs</groupId>
-	<artifactId>deploy-to-uat</artifactId>
+	<artifactId>deploy-to-test2</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
