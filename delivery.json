@@ -1,13 +1,14 @@
 {"delivery": {
-  "deployed": false,
-  "soa":   [
-        {
-      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjExYWIyNDBkNzE0MDY2NDM",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.euroscript.gcm.bpm",
-      "name": "gcm-soa-sapcustomer",
-      "version": "8.3.6.2-RC1"
-    }
-  ]
+  "deployed": true,
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjExYWIyNDBkNzE0MDY2NDM",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.bpm",
+    "name": "gcm-soa-sapcustomer",
+    "version": "8.3.6.2-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
