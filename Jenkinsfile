@@ -680,8 +680,8 @@ pipeline {
         booleanParam(name: "Dry run ?", description: "Be careful, if you check this option the composite will be deployed", defaultValue: true)
     }
     environment {
-        JAVA_HOME = "/home/azurejenkins/tools/jdk1.8.0_221"
-        ORACLE_HOME = "/home/azurejenkins/product/12.2.1.3/mw/bpm"
+        JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
+      	ORACLE_HOME = "/home/jenkins/oracle/12.2.1.3/mw/bpm"
     }
     stages {
         stage('Prepare scripts') {
