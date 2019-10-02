@@ -6,7 +6,10 @@
     "format": "maven2",
     "group": "com.euroscript.gcm.application",
     "name": "GCMApp",
-    "version": "8.3.7.0-RC6"
+    "version": "8.3.7.0-RC6",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "soa":   [
         {
@@ -15,7 +18,10 @@
       "format": "maven2",
       "group": "com.euroscript.gcm.bpm",
       "name": "gcm-soa-sapsales",
-      "version": "8.3.7.0-RC1"
+      "version": "8.3.7.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjExYWIyNDBkNzE0MDY2NDM",
@@ -23,7 +29,10 @@
       "format": "maven2",
       "group": "com.euroscript.gcm.bpm",
       "name": "gcm-soa-sapcustomer",
-      "version": "8.3.7.0-RC5"
+      "version": "8.3.7.0-RC5",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     }
   ],
   "spring":   [
@@ -33,7 +42,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.cloud.service",
       "name": "service-customer-invoicing",
-      "version": "8.3.7.0-RC1"
+      "version": "8.3.7.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.cloud.service:service-customer-invoicing:8.3.7.0-RC1"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmMyY2E3N2ZjNGEzYWE5OGM",
@@ -41,7 +53,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.cloud.service",
       "name": "service-volume",
-      "version": "8.3.7.0-RC1"
+      "version": "8.3.7.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.cloud.service:service-volume:8.3.7.0-RC1"
     }
   ],
   "angular":   [
@@ -51,7 +66,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.app",
       "name": "authentication",
-      "version": "8.3.7.0-RC1"
+      "version": "8.3.7.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.app:authentication:8.3.7.0-RC1"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjQ0OWY2NzFjOWQ1NTAyYjU",
@@ -59,7 +77,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.app",
       "name": "queenbee",
-      "version": "8.3.7.0-RC4"
+      "version": "8.3.7.0-RC4",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.app:queenbee:8.3.7.0-RC4"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmZiN2IxNzU2ZGNkZjVhNmU",
@@ -67,7 +88,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.app",
       "name": "hive",
-      "version": "8.3.7.0-RC4"
+      "version": "8.3.7.0-RC4",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.app:hive:8.3.7.0-RC4"
     }
   ]
 }}
