@@ -369,7 +369,7 @@ def downloadArtifact(artifactId) {
 def deployToTomcat(item) {
     displayDeployMessage(item)
 
-    withMaven(mavenSettingsConfig: 'GCS-settings') {
+    withMaven(mavenSettingsConfig: props.mavenSettingsConfig) {
         sh "mvn tomcat7:deploy-only -Dpath=/" + item.name + " -DwarFile=" + workingDirectory + "/" + item.name + "-" + item.version + ".war"
     }
 }
