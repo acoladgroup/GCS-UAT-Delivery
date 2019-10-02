@@ -18,10 +18,6 @@ fullyDeployed = true
  */
 def json
 
-
-tomcatServer =  'si01tu-gcs-apps.amplexor.net'
-webappsPath = '/gcm/product/tomcat-service/webapps/'
-
 /**
  * Deploy the Spring application
  * @param item Nexus artifact
@@ -38,6 +34,8 @@ def deploySpring(item) {
 
             if (!params['Dry run ?']) {
                 deployToTomcat(item)
+
+                item.deployed = true
             }
 
             displaySuccessMessage(item)
@@ -80,7 +78,7 @@ def deployAngular(item) {
             manageCatchedError(item, e)
         } finally {
             dir(workingDirectory) {
-                // deleteDir()
+                deleteDir()
             }
         }
     } else {
@@ -381,15 +379,19 @@ def deployToTomcat(item) {
  * @param item item
  */
 def copyJsConfigFile(item) {
-    def stdoutResult = sh(returnStdout: true, script: "scp -p ./resources/angular/" + props.gcsEnvironment + "/" + item.name + "-config.js tomcat@" + props.angularHost + ":" + webappsPath + item.name + "/").trim()
+    def stdoutResult
+
+    withCredentials([sshUserPrivateKey(credentialsId: props.tomcatServiceCredentialsId, keyFileVariable: 'keyfile')]) {
+        stdoutResult = sh(returnStdout: true, script: "scp -i ${keyfile} -p ./resources/angular/" + props.gcsEnvironment + "/" + item.name + "-config.js tomcat@" + props.tomcatServiceHost + ":" + props.tomcatServiceWebappsFolder + item.name + "/").trim()
+    }
 
     println("#####        Result of SCP " + item.group + ":" + item.name + ":" + item.version + "         ######")
     println(stdoutResult)
     println("########################################################################################################################")
 
-    if (!(stdoutResult.contains(item.name + "-config.js") && stdoutResult.contains("100%"))) {
+    if (stdoutResult != "") {
         item.deployed = false
-        throw new Exception("Can't copy js file for " + item.group + ":" + item.name + ":" + item.version + " on " + props.angularHost + ":" + webappsPath + item.name + "/")
+        throw new Exception("Can't copy js file for " + item.group + ":" + item.name + ":" + item.version + " on " + props.tomcatServiceHost + ":" + props.tomcatServiceWebappsFolder + item.name + "/")
     }
 }
 
@@ -699,7 +701,13 @@ pipeline {
                     checkProperties(props, 'gcsEnvironment')
                     checkProperties(props, 'mavenSettingsConfig')
                     checkProperties(props, 'gitCredentialsId')
-                    checkProperties(props, 'angularHost')
+                    checkProperties(props, 'tomcatServiceCredentialsId')
+                    checkProperties(props, 'tomcatServiceHost')
+                    checkProperties(props, 'tomcatServiceWebappsFolder')
+
+                    println("########################################################################################################################")
+                    println("#                   Deployment on " + props.gcsEnvironment + " environment")
+                    println("########################################################################################################################")
                 }
             }
         }
