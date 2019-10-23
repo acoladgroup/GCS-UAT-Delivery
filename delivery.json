@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjQzY2Y1YWM3N2I3MzNhMjM",
     "repository": "gcm-release",
@@ -8,7 +8,7 @@
     "name": "GCMApp",
     "version": "8.3.7.1-RC1",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:8.3.7.1-RC1"
+    "deployed": true,
+    "status": "OK"
   }]
 }}
