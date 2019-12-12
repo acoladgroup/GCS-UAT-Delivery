@@ -1,13 +1,13 @@
 {"delivery": {
     "deployed": false,
-    "spring":     [
+    "soa":     [
                 {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjBhZTRmODE0M2RiYjI2MGM",
             "repository": "gcm-release",
             "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap",
+            "version": "8.3.8.0-RC6"
         }
     ]
-}}  
+}}
