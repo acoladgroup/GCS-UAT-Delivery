@@ -1,13 +1,14 @@
 {"delivery": {
-    "deployed": false,
-    "soa":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjBhZTRmODE0M2RiYjI2MGM",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "sap",
-            "version": "8.3.8.0-RC6"
-        }
-    ]
+  "deployed": true,
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjBhZTRmODE0M2RiYjI2MGM",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "sap",
+    "version": "8.3.8.0-RC6",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
