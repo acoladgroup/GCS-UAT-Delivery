@@ -1,13 +1,187 @@
 {"delivery": {
     "deployed": false,
+    "adf_app": [    {
+        "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjg4MjYxOWVhYWIxNGEyNDA",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMApp",
+        "version": "8.3.9.0-RC9"
+    }],
+    "osb":     [
+                {
+            "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjY2YzQ5NTIwYmQxZDk4N2I",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.osb",
+            "name": "gcm-sb",
+            "version": "8.3.9.0-RC2"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjM1OTlmMTVjNTFmMzhjZGQ",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.osb",
+            "name": "sap-sb",
+            "version": "8.3.9.0-RC2"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWJmMGFkNzEwNzIxMTY1N2Y",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.osb",
+            "name": "xtm-sb",
+            "version": "8.3.9.0-RC6"
+        }
+    ],
+    "soa":     [
+                {
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTcyZTA4NzdjNjIxNzM1YzU",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap",
+            "version": "8.3.9.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmRmOTU4ZDVjY2NmYzRjZTM",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-engagement",
+            "version": "8.3.9.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjhmZjZmMDVjOTkwNDYwNjA",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-sales",
+            "version": "8.3.9.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjFkNWRiODFlODA0NTdhYmI",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-vendor",
+            "version": "8.3.9.0-RC6"
+        }
+    ],
     "spring":     [
                 {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWE4OTAzNWVhNGRkZTdkMzg",
             "repository": "gcm-release",
             "format": "maven2",
             "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
+            "name": "service-customer-invoicing",
+            "version": "8.3.9.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFmMmZiOWUwOGUwMjE1ODI",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-engagement",
+            "version": "8.3.9.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjdjNmRkNzA4ZjgzOWVjYmI",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-document-sign-off",
+            "version": "8.3.9.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjliOTJjZWE2MGZmMDAxMDI",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-process",
+            "version": "8.3.9.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjE5Y2FkZDljNmUxYWZhNWI",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-report",
+            "version": "8.3.9.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTBlMTAwNWM1YTM0NWZmYmM",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-document-generator",
+            "version": "8.3.9.0-RC5"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmMxY2ExM2UxMmM3YTA5Yjc",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-document-management",
+            "version": "8.3.9.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFjMWIwM2M2YjFmOTJjN2E",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-vendor-invoicing",
+            "version": "8.3.9.0-RC5"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTA3ZjRiNTNiMjQzOWQ3YzU",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-task",
+            "version": "8.3.9.0-RC2"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjNiZGIwZDMyYzcwMDBmYzA",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-connector-gtc",
+            "version": "8.3.9.0-RC2"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjQyZWY5ZmIyMmYzYTg0OTU",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-volume",
+            "version": "8.3.9.0-RC4"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTZhNTU1MDQyMzg3ZDEwZTY",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.cloud.service",
+            "name": "service-workunit",
+            "version": "8.3.9.0-RC2"
+        }
+    ],
+    "angular":     [
+                {
+            "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmQxODlkZDcxYWMzM2MzMDU",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.app",
+            "name": "queenbee",
+            "version": "8.3.9.0-RC7"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmRmYTViNjcxODY4ZTk2ZTM",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.app",
+            "name": "hive",
+            "version": "8.3.9.0-RC6"
         }
     ]
-}}  
+}}
