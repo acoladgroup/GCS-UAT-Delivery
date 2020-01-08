@@ -1,19 +1,25 @@
 {"delivery": {
-    "deployed": false,
-    "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjEwNDBiMGMzM2JmM2U5YTM",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMApp",
-        "version": "8.3.9.0-RC10"
-    }],
-    "soa": [    {
-        "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjM5NGI5NmJjNmFlOTQxM2Q",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.soa",
-        "name": "sap-sales",
-        "version": "8.3.9.0-RC10"
-    }]
+  "deployed": true,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjEwNDBiMGMzM2JmM2U5YTM",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "8.3.9.0-RC10",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjM5NGI5NmJjNmFlOTQxM2Q",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "sap-sales",
+    "version": "8.3.9.0-RC10",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
