@@ -18,10 +18,9 @@ def undeployedRetiredVersion(serverInfoFile, appToUndeploy):
 		cd('AppDeployments')
 		appList = ls(returnMap='true')
 
-		domainConfig()
-
 		for appName in appList:
 			if appName.startswith(appToUndeploy + '#'):
+              	domainConfig()
 				cd ('/AppDeployments/' + appName + '/Targets')
 				
 				mytargets = ls(returnMap='true')
