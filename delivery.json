@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjg4MjYxOWVhYWIxNGEyNDA",
     "repository": "gcm-release",
@@ -9,7 +9,8 @@
     "version": "8.3.9.0-RC9",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "osb":   [
         {
@@ -21,7 +22,8 @@
       "version": "8.3.9.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjM1OTlmMTVjNTFmMzhjZGQ",
@@ -32,7 +34,8 @@
       "version": "8.3.9.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWJmMGFkNzEwNzIxMTY1N2Y",
@@ -43,7 +46,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "soa":   [
@@ -56,7 +60,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmRmOTU4ZDVjY2NmYzRjZTM",
@@ -67,7 +72,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjhmZjZmMDVjOTkwNDYwNjA",
@@ -78,7 +84,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjFkNWRiODFlODA0NTdhYmI",
@@ -89,7 +96,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "spring":   [
@@ -102,7 +110,8 @@
       "version": "8.3.9.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFmMmZiOWUwOGUwMjE1ODI",
@@ -113,7 +122,8 @@
       "version": "8.3.9.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjdjNmRkNzA4ZjgzOWVjYmI",
@@ -124,7 +134,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjliOTJjZWE2MGZmMDAxMDI",
@@ -135,7 +146,8 @@
       "version": "8.3.9.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjE5Y2FkZDljNmUxYWZhNWI",
@@ -145,8 +157,8 @@
       "name": "service-report",
       "version": "8.3.9.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.cloud.service:service-report:8.3.9.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTBlMTAwNWM1YTM0NWZmYmM",
@@ -156,8 +168,8 @@
       "name": "service-document-generator",
       "version": "8.3.9.0-RC5",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.cloud.service:service-document-generator:8.3.9.0-RC5"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmMxY2ExM2UxMmM3YTA5Yjc",
@@ -167,8 +179,8 @@
       "name": "service-document-management",
       "version": "8.3.9.0-RC6",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.cloud.service:service-document-management:8.3.9.0-RC6"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFjMWIwM2M2YjFmOTJjN2E",
@@ -179,7 +191,8 @@
       "version": "8.3.9.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTA3ZjRiNTNiMjQzOWQ3YzU",
@@ -190,7 +203,8 @@
       "version": "8.3.9.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjNiZGIwZDMyYzcwMDBmYzA",
@@ -201,7 +215,8 @@
       "version": "8.3.9.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjQyZWY5ZmIyMmYzYTg0OTU",
@@ -212,7 +227,8 @@
       "version": "8.3.9.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTZhNTU1MDQyMzg3ZDEwZTY",
@@ -223,7 +239,8 @@
       "version": "8.3.9.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "angular":   [
@@ -236,7 +253,8 @@
       "version": "8.3.9.0-RC7",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmRmYTViNjcxODY4ZTk2ZTM",
@@ -247,7 +265,8 @@
       "version": "8.3.9.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
