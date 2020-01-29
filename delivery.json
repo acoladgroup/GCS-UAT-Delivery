@@ -1,11 +1,14 @@
 {"delivery": {
-    "deployed": false,
-    "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTY5NjVlNDJlYjU3OWJkYWI",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMApp",
-        "version": "8.3.9.4-RC1"
-    }]
+  "deployed": true,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTY5NjVlNDJlYjU3OWJkYWI",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "8.3.9.4-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
