@@ -1,156 +1,206 @@
-{
-	"delivery": {
-		"deployed": false,
-		"adf_app": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjgwZDliMTA5MDUzNGYyYTA",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.euroscript.gcm.application",
-				"name": "GCMApp",
-				"version": "9.0.0.0-RC6"
-			}
-		],
-		"osb": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjRhYTIyY2NjZjg1NjQ0ZGI",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.osb",
-				"name": "gcm-sb",
-				"version": "9.0.0.0-RC1"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFhYjk5MDUxMWQ3NGU0ODU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.osb",
-				"name": "sap-sb",
-				"version": "9.0.0.0-RC5"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmYwYjQ0MjgyYjIzY2E4ZDk",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.osb",
-				"name": "xtm-sb",
-				"version": "9.0.0.0-RC4"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmEwMjMyNzg4NTMwZGQ1MTU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.osb",
-				"name": "task-sb",
-				"version": "9.0.0.0-RC3"
-			}
-		],
-		"soa_mds": [],
-		"soa": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjRkZDM3MjY2MGYxNWI3Mzg",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap",
-				"version": "9.0.0.0-RC5"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjhhNmY3MjIxNDY0OTEzMzM",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-sales",
-				"version": "9.0.0.0-RC4"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTNiYWYxNGViOWY0YjZhMWI",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-queue",
-				"version": "9.0.0.0-RC1"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjQxZDFlYTRhNjQzNjJkNTI",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-vendor",
-				"version": "9.0.0.0-RC5"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjU3ZTFhYTdkMDAyNTIyOWI",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-engagement",
-				"version": "9.0.0.0-RC5"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTliYTUzZGE2MTI5NzkwYjQ",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "workunit-common",
-				"version": "9.0.0.0-RC3"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjI4MjgzMjM1YjJlYzUzOWU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "process-common",
-				"version": "9.0.0.0-RC3"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTNmNmNjMWQ0ZTFiNjQwNzE",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "xtm-setup",
-				"version": "9.0.0.0-RC2"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjEzOWYyYmVkM2U0NzM2M2M",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "xtm-common",
-				"version": "9.0.0.0-RC2"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWRjZmVmN2ZiNTk0MjgzNTE",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "xtm-target-file",
-				"version": "9.0.0.0-RC4"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmY0Y2UzZTJmZWU5OTg4MmE",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "task-common",
-				"version": "9.0.0.0-RC4"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmY0Y2UzZTJmZWU5OTg4MmE",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.euroscript.xtm",
-				"name": "xtm-soa",
-				"version": "9.0.0.0-RC4"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTBiMzQ1NjY4OGMzNjk3MzU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "xtm-project",
-				"version": "9.0.0.0-RC4"
-			}
-		]
-	}
-}
+{"delivery": {
+  "deployed": true,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjgwZDliMTA5MDUzNGYyYTA",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.0.0.0-RC6",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
+  "osb":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjRhYTIyY2NjZjg1NjQ0ZGI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "gcm-sb",
+      "version": "9.0.0.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFhYjk5MDUxMWQ3NGU0ODU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "sap-sb",
+      "version": "9.0.0.0-RC5",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmYwYjQ0MjgyYjIzY2E4ZDk",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "xtm-sb",
+      "version": "9.0.0.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmEwMjMyNzg4NTMwZGQ1MTU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "task-sb",
+      "version": "9.0.0.0-RC3",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    }
+  ],
+  "soa_mds": [],
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjRkZDM3MjY2MGYxNWI3Mzg",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap",
+      "version": "9.0.0.0-RC5",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjhhNmY3MjIxNDY0OTEzMzM",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-sales",
+      "version": "9.0.0.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTNiYWYxNGViOWY0YjZhMWI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-queue",
+      "version": "9.0.0.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjQxZDFlYTRhNjQzNjJkNTI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-vendor",
+      "version": "9.0.0.0-RC5",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjU3ZTFhYTdkMDAyNTIyOWI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-engagement",
+      "version": "9.0.0.0-RC5",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTliYTUzZGE2MTI5NzkwYjQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "workunit-common",
+      "version": "9.0.0.0-RC3",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjI4MjgzMjM1YjJlYzUzOWU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "process-common",
+      "version": "9.0.0.0-RC3",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTNmNmNjMWQ0ZTFiNjQwNzE",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "xtm-setup",
+      "version": "9.0.0.0-RC2",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjEzOWYyYmVkM2U0NzM2M2M",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "xtm-common",
+      "version": "9.0.0.0-RC2",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWRjZmVmN2ZiNTk0MjgzNTE",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "xtm-target-file",
+      "version": "9.0.0.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmY0Y2UzZTJmZWU5OTg4MmE",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "task-common",
+      "version": "9.0.0.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmY0Y2UzZTJmZWU5OTg4MmE",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.euroscript.xtm",
+      "name": "xtm-soa",
+      "version": "9.0.0.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTBiMzQ1NjY4OGMzNjk3MzU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "xtm-project",
+      "version": "9.0.0.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    }
+  ]
+}}
