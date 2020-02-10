@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjgwZDliMTA5MDUzNGYyYTA",
     "repository": "gcm-release",
@@ -9,7 +9,8 @@
     "version": "9.0.0.0-RC6",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "osb":   [
         {
@@ -21,7 +22,8 @@
       "version": "9.0.0.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmFhYjk5MDUxMWQ3NGU0ODU",
@@ -32,7 +34,8 @@
       "version": "9.0.0.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmYwYjQ0MjgyYjIzY2E4ZDk",
@@ -43,7 +46,8 @@
       "version": "9.0.0.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmEwMjMyNzg4NTMwZGQ1MTU",
@@ -54,7 +58,8 @@
       "version": "9.0.0.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "soa_mds": [],
@@ -68,7 +73,8 @@
       "version": "9.0.0.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjhhNmY3MjIxNDY0OTEzMzM",
@@ -79,7 +85,8 @@
       "version": "9.0.0.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTNiYWYxNGViOWY0YjZhMWI",
@@ -90,7 +97,8 @@
       "version": "9.0.0.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjQxZDFlYTRhNjQzNjJkNTI",
@@ -101,7 +109,8 @@
       "version": "9.0.0.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjU3ZTFhYTdkMDAyNTIyOWI",
@@ -112,7 +121,8 @@
       "version": "9.0.0.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTliYTUzZGE2MTI5NzkwYjQ",
@@ -123,7 +133,8 @@
       "version": "9.0.0.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjI4MjgzMjM1YjJlYzUzOWU",
@@ -134,7 +145,8 @@
       "version": "9.0.0.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTNmNmNjMWQ0ZTFiNjQwNzE",
@@ -145,7 +157,8 @@
       "version": "9.0.0.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjEzOWYyYmVkM2U0NzM2M2M",
@@ -156,7 +169,8 @@
       "version": "9.0.0.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWRjZmVmN2ZiNTk0MjgzNTE",
@@ -167,7 +181,8 @@
       "version": "9.0.0.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmY0Y2UzZTJmZWU5OTg4MmE",
@@ -178,7 +193,8 @@
       "version": "9.0.0.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmY0Y2UzZTJmZWU5OTg4MmE",
@@ -186,7 +202,10 @@
       "format": "maven2",
       "group": "com.euroscript.xtm",
       "name": "xtm-soa",
-      "version": "9.0.0.0-RC6"
+      "version": "9.0.0.0-RC6",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTBiMzQ1NjY4OGMzNjk3MzU",
@@ -197,7 +216,8 @@
       "version": "9.0.0.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
