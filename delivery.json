@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "soa":   [
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjdlMzQ2NzQ0YjY2MGQzMTc",
@@ -9,8 +9,8 @@
       "name": "sap-engagement",
       "version": "9.0.0.1-RC2",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:sap-engagement:9.0.0.1-RC2"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjY4NDM4NDcxODAyYWE1MDk",
@@ -20,8 +20,8 @@
       "name": "sap-sales",
       "version": "9.0.0.1-RC2",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:sap-sales:9.0.0.1-RC2"
+      "deployed": true,
+      "status": "OK"
     }
   ]
 }}
