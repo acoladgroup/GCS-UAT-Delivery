@@ -1,23 +1,27 @@
-{
-	"delivery": {
-		"deployed": false,
-		"soa": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjdlMzQ2NzQ0YjY2MGQzMTc",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-engagement",
-				"version": "9.0.0.1-RC2"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjY4NDM4NDcxODAyYWE1MDk",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-sales",
-				"version": "9.0.0.1-RC2"
-			}
-		]
-	}
-}
+{"delivery": {
+  "deployed": false,
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjdlMzQ2NzQ0YjY2MGQzMTc",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-engagement",
+      "version": "9.0.0.1-RC2",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:sap-engagement:9.0.0.1-RC2"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjY4NDM4NDcxODAyYWE1MDk",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-sales",
+      "version": "9.0.0.1-RC2",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:sap-sales:9.0.0.1-RC2"
+    }
+  ]
+}}
