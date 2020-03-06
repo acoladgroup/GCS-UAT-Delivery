@@ -1,33 +1,38 @@
-{
-	"delivery": {
-		"deployed": false,
-		"adf_app": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmIxZmJkZWQ4MDM5ZTFmNTc",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.euroscript.gcm.application",
-				"name": "GCMApp",
-				"version": "9.0.0.2-RC1"
-			}
-		],
-		"soa": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmE0OGE0ODkwMDY0MzYxZWI",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-sales",
-				"version": "9.0.0.2-RC1"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmM5NWMwMjY5NTYwNTBiN2Q",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-vendor",
-				"version": "9.0.0.2-RC1"
-			}
-		]
-	}
-}
+{"delivery": {
+  "deployed": true,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmIxZmJkZWQ4MDM5ZTFmNTc",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.0.0.2-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmE0OGE0ODkwMDY0MzYxZWI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-sales",
+      "version": "9.0.0.2-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmM5NWMwMjY5NTYwNTBiN2Q",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-vendor",
+      "version": "9.0.0.2-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    }
+  ]
+}}
