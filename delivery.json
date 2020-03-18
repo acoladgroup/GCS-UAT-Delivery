@@ -1,25 +1,25 @@
-{
-	"delivery": {
-		"deployed": false,
-		"adf_app": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjhlMTkwYjQ5NmI1YTdjOGU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.euroscript.gcm.application",
-				"name": "GCMApp",
-				"version": "9.0.0.3-RC1"
-			}
-		],
-		"soa": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmM0NTkwYmQ2ODkxNWYxZDI",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.euroscript.xtm",
-				"name": "xtm-soa",
-				"version": "9.0.0.3-RC1"
-			}
-		]
-	}
-}
+{"delivery": {
+  "deployed": true,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjhlMTkwYjQ5NmI1YTdjOGU",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.0.0.3-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmM0NTkwYmQ2ODkxNWYxZDI",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.xtm",
+    "name": "xtm-soa",
+    "version": "9.0.0.3-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
+}}
