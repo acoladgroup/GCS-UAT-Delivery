@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjhlMTkwYjQ5NmI1YTdjOGU",
     "repository": "gcm-release",
@@ -9,7 +9,8 @@
     "version": "9.0.0.3-RC1",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "soa": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmM0NTkwYmQ2ODkxNWYxZDI",
@@ -20,14 +21,18 @@
     "version": "9.0.0.3-RC1",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
-  "osb": [    {
-        "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmQzYjQ3Yjg5ODRkMzk0OTg",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "xtm-sb",
-        "version": "9.0.0.3-RC2"
-    }]
+  "osb": [  {
+    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmQzYjQ3Yjg5ODRkMzk0OTg",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.osb",
+    "name": "xtm-sb",
+    "version": "9.0.0.3-RC2",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
