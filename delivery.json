@@ -20,6 +20,7 @@
     "version": "9.0.0.4-RC1",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }]
 }}
