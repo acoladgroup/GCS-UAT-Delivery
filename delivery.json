@@ -1,19 +1,25 @@
 {"delivery": {
+  "deployed": false,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmIzNWE5MmY1OTVmMmExMmU",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.0.0.4-RC2",
+    "downloaded": true,
     "deployed": false,
-    "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmIzNWE5MmY1OTVmMmExMmU",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMApp",
-        "version": "9.0.0.4-RC2"
-    }],
-    "osb": [    {
-        "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjMzNzc3MjYyNGVjZjRkNjA",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "xtm-sb",
-        "version": "9.0.0.4-RC1"
-    }]
+    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.0.0.4-RC2"
+  }],
+  "osb": [  {
+    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjMzNzc3MjYyNGVjZjRkNjA",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.osb",
+    "name": "xtm-sb",
+    "version": "9.0.0.4-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
