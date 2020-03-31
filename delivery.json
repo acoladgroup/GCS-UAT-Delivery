@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmIzNWE5MmY1OTVmMmExMmU",
     "repository": "gcm-release",
@@ -8,8 +8,8 @@
     "name": "GCMApp",
     "version": "9.0.0.4-RC2",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.0.0.4-RC2"
+    "deployed": true,
+    "status": "OK"
   }],
   "osb": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjMzNzc3MjYyNGVjZjRkNjA",
