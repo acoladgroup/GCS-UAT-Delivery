@@ -1,149 +1,45 @@
-{"delivery": {
-  "deployed": true,
-  "adf_app": [  {
-    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjk4MzA4ZTZhNmVhODZhZDc",
-    "repository": "gcm-release",
-    "format": "maven2",
-    "group": "com.euroscript.gcm.application",
-    "name": "GCMApp",
-    "version": "9.0.1.0-RC6",
-    "downloaded": true,
-    "deployed": true,
-    "status": "OK"
-  }],
-  "adf_dmws": [  {
-    "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjJjYjFkNTAzZGYwMTU2MWE",
-    "repository": "gcm-release",
-    "format": "maven2",
-    "group": "com.euroscript.gcm.application.modules",
-    "name": "DMWebServicesEAR",
-    "version": "9.0.1.0-RC6",
-    "downloaded": true,
-    "deployed": true,
-    "status": "OK",
-    "redeployedStatus": true
-  }],
-  "adf_dmrestws": [  {
-    "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmNmNTkyOWQ4N2FmODk5YzE",
-    "repository": "gcm-release",
-    "format": "maven2",
-    "group": "com.euroscript.gcm.application.modules",
-    "name": "DMWebServicesRESTEAR",
-    "version": "9.0.1.0-RC6",
-    "downloaded": true,
-    "deployed": true,
-    "status": "OK"
-  }],
-  "adf_pmws": [  {
-    "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTg5MzhlZDg0N2YwMjY1YzU",
-    "repository": "gcm-release",
-    "format": "maven2",
-    "group": "com.euroscript.gcm.application.modules",
-    "name": "PMWebServicesEAR",
-    "version": "9.0.1.0-RC6",
-    "downloaded": true,
-    "deployed": true,
-    "status": "OK",
-    "redeployedStatus": true
-  }],
-  "osb":   [
-        {
-      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjY1MmY4ZmEyNzI0M2NlY2M",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.osb",
-      "name": "sap-sb",
-      "version": "9.0.1.0-RC1",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    },
-        {
-      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTE4ZWFkNWY2NTQ0Zjk5NDI",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.osb",
-      "name": "xtm-sb",
-      "version": "9.0.1.0-RC4",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    }
-  ],
-  "soa":   [
-        {
-      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTBkMzNkMDE5YjczYjQ1ZDE",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.soa",
-      "name": "task-common",
-      "version": "9.0.1.0-RC5",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    },
-        {
-      "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjQwNjNkZDU1MDk5OGUyOTE",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.soa",
-      "name": "workunit-check-at-start",
-      "version": "9.0.1.0-RC1",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    },
-        {
-      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWFmZjYxNmUyYTRjN2MzYzQ",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.soa",
-      "name": "sap-sales",
-      "version": "9.0.1.0-RC5",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    },
-        {
-      "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjg0OTc2YWZkN2ZhODgyMzI",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.soa",
-      "name": "sap-vendor",
-      "version": "9.0.1.0-RC6",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    },
-        {
-      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmU0NGUzMGI3NTFiNmQxNGM",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.soa",
-      "name": "sap",
-      "version": "9.0.1.0-RC1",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    },
-        {
-      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmM5YTNiZmFiY2Q1ZTBmYTA",
-      "repository": "gcm-release",
-      "format": "maven2",
-      "group": "com.amplexor.rikai.soa",
-      "name": "sap-queue",
-      "version": "9.0.1.0-RC6",
-      "downloaded": true,
-      "deployed": true,
-      "status": "OK",
-      "redeployedStatus": true
-    }
-  ]
-}}
+{
+	"delivery": {
+		"deployed": false,
+		"adf_app": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjk4MzA4ZTZhNmVhODZhZDc",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application",
+				"name": "GCMApp",
+				"version": "9.0.1.0-RC7"
+			}
+		],
+		"adf_dmws": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjJjYjFkNTAzZGYwMTU2MWE",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application.modules",
+				"name": "DMWebServicesEAR",
+				"version": "9.0.1.0-RC7"
+			}
+		],
+		"adf_dmrestws": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmNmNTkyOWQ4N2FmODk5YzE",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application.modules",
+				"name": "DMWebServicesRESTEAR",
+				"version": "9.0.1.0-RC7"
+			}
+		],
+		"adf_pmws": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTg5MzhlZDg0N2YwMjY1YzU",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application.modules",
+				"name": "PMWebServicesEAR",
+				"version": "9.0.1.0-RC7"
+			}
+		]
+	}
+}
