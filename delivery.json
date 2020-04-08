@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjk4MzA4ZTZhNmVhODZhZDc",
     "repository": "gcm-release",
@@ -8,8 +8,8 @@
     "name": "GCMApp",
     "version": "9.0.1.0-RC6",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.0.1.0-RC6"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjJjYjFkNTAzZGYwMTU2MWE",
@@ -20,7 +20,8 @@
     "version": "9.0.1.0-RC6",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmNmNTkyOWQ4N2FmODk5YzE",
@@ -30,8 +31,8 @@
     "name": "DMWebServicesRESTEAR",
     "version": "9.0.1.0-RC6",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.0.1.0-RC6"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTg5MzhlZDg0N2YwMjY1YzU",
@@ -42,7 +43,8 @@
     "version": "9.0.1.0-RC6",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "osb":   [
         {
@@ -54,7 +56,8 @@
       "version": "9.0.1.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTE4ZWFkNWY2NTQ0Zjk5NDI",
@@ -65,7 +68,8 @@
       "version": "9.0.1.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "soa":   [
@@ -78,7 +82,8 @@
       "version": "9.0.1.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjQwNjNkZDU1MDk5OGUyOTE",
@@ -89,7 +94,8 @@
       "version": "9.0.1.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWFmZjYxNmUyYTRjN2MzYzQ",
@@ -100,7 +106,8 @@
       "version": "9.0.1.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjg0OTc2YWZkN2ZhODgyMzI",
@@ -111,7 +118,8 @@
       "version": "9.0.1.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmU0NGUzMGI3NTFiNmQxNGM",
@@ -122,7 +130,8 @@
       "version": "9.0.1.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmM5YTNiZmFiY2Q1ZTBmYTA",
@@ -133,7 +142,8 @@
       "version": "9.0.1.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
