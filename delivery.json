@@ -1,13 +1,63 @@
-{"delivery": {
-    "deployed": false,
-    "spring":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
-        }
-    ]
-}}  
+{
+	"delivery": {
+		"deployed": false,
+		"adf_app": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjk4MzA4ZTZhNmVhODZhZDc",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application",
+				"name": "GCMApp",
+				"version": "9.0.1.0-RC8"
+			}
+		],
+		"adf_dmws": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjJjYjFkNTAzZGYwMTU2MWE",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application.modules",
+				"name": "DMWebServicesEAR",
+				"version": "9.0.1.0-RC8"
+			}
+		],
+		"adf_dmrestws": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmNmNTkyOWQ4N2FmODk5YzE",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application.modules",
+				"name": "DMWebServicesRESTEAR",
+				"version": "9.0.1.0-RC8"
+			}
+		],
+		"adf_pmws": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTg5MzhlZDg0N2YwMjY1YzU",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.euroscript.gcm.application.modules",
+				"name": "PMWebServicesEAR",
+				"version": "9.0.1.0-RC8"
+			}
+		],
+		"soa": [
+			{
+				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYWFmZjYxNmUyYTRjN2MzYzQ",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.amplexor.rikai.soa",
+				"name": "sap-sales",
+				"version": "9.0.1.0-RC8"
+			},
+			{
+				"id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjZmZTY0ZDkzMTZkNTJhMTY",
+				"repository": "gcm-release",
+				"format": "maven2",
+				"group": "com.amplexor.rikai.soa",
+				"name": "workunit-common",
+				"version": "9.0.1.0-RC8"
+			}
+		]
+	}
+}
