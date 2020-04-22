@@ -1,15 +1,14 @@
-{
-	"delivery": {
-		"deployed": false,
-		"soa": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTViMGM0YWMxY2M3ZjA4MmU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "xtm-project",
-				"version": "9.0.1.0-RC9"
-			}
-		]
-	}
-}
+{"delivery": {
+  "deployed": true,
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTViMGM0YWMxY2M3ZjA4MmU",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "xtm-project",
+    "version": "9.0.1.0-RC9",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
+}}
