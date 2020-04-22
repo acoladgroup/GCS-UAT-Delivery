@@ -1,23 +1,27 @@
-{
-	"delivery": {
-		"deployed": false,
-		"soa": [
-			{
-				"id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjkwOWJjOTAzNGM0NTI3YTc",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "sap-engagement",
-				"version": "9.0.1.0-RC8"
-			},
-			{
-				"id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTViMGM0YWMxY2M3ZjA4MmU",
-				"repository": "gcm-release",
-				"format": "maven2",
-				"group": "com.amplexor.rikai.soa",
-				"name": "xtm-project",
-				"version": "9.0.1.0-RC8"
-			}
-		]
-	}
-}
+{"delivery": {
+  "deployed": true,
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjkwOWJjOTAzNGM0NTI3YTc",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-engagement",
+      "version": "9.0.1.0-RC8",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTViMGM0YWMxY2M3ZjA4MmU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "xtm-project",
+      "version": "9.0.1.0-RC8",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    }
+  ]
+}}
