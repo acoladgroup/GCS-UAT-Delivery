@@ -1,13 +1,119 @@
 {"delivery": {
     "deployed": false,
-    "spring":     [
+    "adf_app": [    {
+        "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmU2NTBiYzQxNzczMzU3MmM",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMApp",
+        "version": "9.0.2.0-RC7"
+    }],
+    "adf_dmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjU0ODJlNjE0NTY2NmEzZGE",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesEAR",
+        "version": "9.0.2.0-RC7"
+    }],
+    "adf_dmrestws": [    {
+        "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjA3OTA0Mjg2N2Q1NDJjODM",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesRESTEAR",
+        "version": "9.0.2.0-RC7"
+    }],
+    "adf_pmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjY1YWViZWEwMGNiM2Y0MDY",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "PMWebServicesEAR",
+        "version": "9.0.2.0-RC7"
+    }],
+    "osb":     [
                 {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
+            "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjkwNmE3MDRhZWZmNGQ3OTU",
             "repository": "gcm-release",
             "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
+            "group": "com.amplexor.rikai.osb",
+            "name": "task-sb",
+            "version": "9.0.2.0-RC3"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTcwOGNiZTdlNzUwY2RmOTc",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.osb",
+            "name": "sap-sb",
+            "version": "9.0.2.0-RC1"
+        }
+    ],
+    "soa_mds": [    {
+        "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjY0N2M3MWQ5Y2UzNTdmNTI",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.soa",
+        "name": "mds",
+        "version": "9.0.2.0-RC1"
+    }],
+    "soa":     [
+                {
+            "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjM5YzBjZDYzNjZiODY3Zjg",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-sales",
+            "version": "9.0.2.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNmJhNDU5MTU0OTNlZmRlY2M",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "task-common",
+            "version": "9.0.2.0-RC3"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjhkNWI3MzZlOTIwZDFiMWQ",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "workunit-common",
+            "version": "9.0.2.0-RC6"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZmMzOWNhNTU0NmQwZDI1MGI",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-vendor",
+            "version": "9.0.2.0-RC4"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjJhMTRjN2JkMWMyZTA4Nzg",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "default-workunit",
+            "version": "9.0.2.0-RC3"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjNjNDk0ZmI4NmNjOWMwOTA",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "human-task-events",
+            "version": "9.0.2.0-RC5"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjRjYmVkMDAyMTYyM2M0ODA",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "bpm-assistance",
+            "version": "9.0.2.0-RC5"
         }
     ]
-}}  
+}}
