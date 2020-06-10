@@ -1,18 +1,21 @@
 {"delivery": {
-    "deployed": false,
-    "adf_app": [],
-    "adf_dmws": [],
-    "adf_dmrestws": [],
-    "adf_pmws": [],
-    "adf_accounts": [],
-    "osb": [],
-    "soa_mds": [],
-    "soa": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDdiNDRlNjRmNDY5NDMwZDY",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.soa",
-        "name": "workunit-common",
-        "version": "9.0.2.0-RC8"
-    }]
+  "deployed": true,
+  "adf_app": [],
+  "adf_dmws": [],
+  "adf_dmrestws": [],
+  "adf_pmws": [],
+  "adf_accounts": [],
+  "osb": [],
+  "soa_mds": [],
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDdiNDRlNjRmNDY5NDMwZDY",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "workunit-common",
+    "version": "9.0.2.0-RC8",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
