@@ -20,7 +20,8 @@
     "version": "9.0.2.0-RC9",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYjA3OTA0Mjg2N2Q1NDJjODM",
@@ -31,7 +32,8 @@
     "version": "9.0.2.0-RC9",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6NzZkN2Q3ZTQxODZhMzkwZjY1YWViZWEwMGNiM2Y0MDY",
@@ -42,6 +44,7 @@
     "version": "9.0.2.0-RC9",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }]
 }}
