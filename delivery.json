@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6MWM3ODdhMDNkYjgyMDllYmU2NTBiYzQxNzczMzU3MmM",
     "repository": "gcm-release",
@@ -8,8 +8,8 @@
     "name": "GCMApp",
     "version": "9.0.2.0-RC9",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.0.2.0-RC9"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Y2Y2MDZmODI1NjBlYTkwNjU0ODJlNjE0NTY2NmEzZGE",
