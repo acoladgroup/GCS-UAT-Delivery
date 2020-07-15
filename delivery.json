@@ -7,9 +7,7 @@
     "group": "com.euroscript.gcm.application",
     "name": "GCMApp",
     "version": "9.0.3.0-RC3",
-    "downloaded": true,
-    "deployed": true,
-    "status": "OK"
+    "downloaded": true
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGEzZmY5MzllYTkyMzk2MzE",
@@ -18,9 +16,7 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "DMWebServicesEAR",
     "version": "9.0.3.0-RC3",
-    "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.0.3.0-RC3"
+    "downloaded": true
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWY2ZDIxMmJmZmRkZDNhNzI",
@@ -29,9 +25,7 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "DMWebServicesRESTEAR",
     "version": "9.0.3.0-RC3",
-    "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.0.3.0-RC3"
+    "downloaded": true
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTgxNjUwNzI5OGQyODYxNzA",
@@ -51,9 +45,7 @@
     "group": "com.euroscript.gcm.application",
     "name": "GCMAppAccountsEar",
     "version": "9.0.3.0-RC3",
-    "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMAppAccountsEar:9.0.3.0-RC3"
+    "downloaded": true
   }],
   "osb":   [
         {
