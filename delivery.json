@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWQwMzFkOWU5ZDNiNjk0NzQ",
     "repository": "gcm-release",
@@ -7,7 +7,9 @@
     "group": "com.euroscript.gcm.application",
     "name": "GCMApp",
     "version": "9.0.3.0-RC3",
-    "downloaded": true
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGEzZmY5MzllYTkyMzk2MzE",
@@ -16,7 +18,9 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "DMWebServicesEAR",
     "version": "9.0.3.0-RC3",
-    "downloaded": true
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWY2ZDIxMmJmZmRkZDNhNzI",
@@ -25,7 +29,9 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "DMWebServicesRESTEAR",
     "version": "9.0.3.0-RC3",
-    "downloaded": true
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTgxNjUwNzI5OGQyODYxNzA",
@@ -36,7 +42,8 @@
     "version": "9.0.3.0-RC3",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_accounts": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDRjMTNhZTFlYWI1ZmZmMDU",
@@ -45,7 +52,9 @@
     "group": "com.euroscript.gcm.application",
     "name": "GCMAppAccountsEar",
     "version": "9.0.3.0-RC3",
-    "downloaded": true
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "osb":   [
         {
@@ -57,7 +66,8 @@
       "version": "9.0.3.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWFiYjNlMjQwMmM4ZjI0ODU",
@@ -68,7 +78,8 @@
       "version": "9.0.3.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "soa_mds": [],
@@ -82,7 +93,8 @@
       "version": "9.0.3.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTdlN2QwNzI4YmViYzU3YzU",
@@ -93,7 +105,8 @@
       "version": "9.0.3.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDcyYzBmYWZjZTg5Y2JmODA",
@@ -104,7 +117,8 @@
       "version": "9.0.3.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDExNjk0NjcwYjk3NzFkYzQ",
@@ -115,7 +129,8 @@
       "version": "9.0.3.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJhZjJlNDlmODJiYWQ4MmU",
@@ -126,7 +141,8 @@
       "version": "9.0.3.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg3ODBmZWFkMjg5NTY4Y2U",
@@ -137,7 +153,8 @@
       "version": "9.0.3.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTYzMGM0Y2FiY2Q0YTJmNTg",
@@ -148,7 +165,8 @@
       "version": "9.0.3.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg0MWM4YjIxNGYxNWNkZDQ",
@@ -159,7 +177,8 @@
       "version": "9.0.3.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
