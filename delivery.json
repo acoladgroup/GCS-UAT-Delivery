@@ -1,14 +1,126 @@
 {"delivery": {
-  "deployed": false,
-  "spring": [  {
-    "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
-    "repository": "gcm-release",
-    "format": "maven2",
-    "group": "com.amplexor.gcs.cloud.service",
-    "name": "service-test",
-    "version": "3.0.1.0-RC1",
-    "downloaded": true,
     "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.cloud.service:service-test:3.0.1.0-RC1"
-  }]
+"adf_app": [    {
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWQwMzFkOWU5ZDNiNjk0NzQ",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMApp",
+        "version": "9.0.3.0-RC3"
+    }],
+    "adf_dmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGEzZmY5MzllYTkyMzk2MzE",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesEAR",
+        "version": "9.0.3.0-RC3"
+    }],
+    "adf_dmrestws": [    {
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWY2ZDIxMmJmZmRkZDNhNzI",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesRESTEAR",
+        "version": "9.0.3.0-RC3"
+    }],
+    "adf_pmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTgxNjUwNzI5OGQyODYxNzA",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "PMWebServicesEAR",
+        "version": "9.0.3.0-RC3"
+    }],
+    "adf_accounts": [    {
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDRjMTNhZTFlYWI1ZmZmMDU",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMAppAccountsEar",
+        "version": "9.0.3.0-RC3"
+    }],
+    "osb": [    {
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTllOGJiZDRiOTJkMjM2NzY",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.osb",
+        "name": "xtm-sb",
+        "version": "9.0.3.0-RC1"
+    },
+	{
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWFiYjNlMjQwMmM4ZjI0ODU",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.osb",
+        "name": "sap-sb",
+        "version": "9.0.3.0-RC3"
+    }],
+    "soa_mds": [],
+    "soa":     [
+                {
+            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDY2MmY2YWY5ZmQ1NTM5ZWE",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-sales",
+            "version": "9.0.3.0-RC2"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTdlN2QwNzI4YmViYzU3YzU",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "xtm-common",
+            "version": "9.0.3.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDcyYzBmYWZjZTg5Y2JmODA",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "workunit-common",
+            "version": "9.0.3.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDExNjk0NjcwYjk3NzFkYzQ",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "xtm-project",
+            "version": "9.0.3.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJhZjJlNDlmODJiYWQ4MmU",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-vendor",
+            "version": "9.0.3.0-RC3"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg3ODBmZWFkMjg5NTY4Y2U",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-engagement",
+            "version": "9.0.3.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTYzMGM0Y2FiY2Q0YTJmNTg",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "sap-queue",
+            "version": "9.0.3.0-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg0MWM4YjIxNGYxNWNkZDQ",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.rikai.soa",
+            "name": "task-common",
+            "version": "9.0.3.0-RC3"
+        }
+    ]
 }}
