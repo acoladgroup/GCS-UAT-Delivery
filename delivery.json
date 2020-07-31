@@ -1,31 +1,40 @@
 {"delivery": {
-    "deployed": false,
-"adf_app": [],
-    "osb": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDFhOTkxZmJjOWJkZjYyZTM",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "xtm-sb",
-        "version": "9.0.3.0-RC4"
+  "deployed": true,
+  "adf_app": [],
+  "osb":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDFhOTkxZmJjOWJkZjYyZTM",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "xtm-sb",
+      "version": "9.0.3.0-RC4",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
-	 {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg4MDliODdmNzgyMTM4ZWQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "sap-sb",
-        "version": "9.0.3.0-RC5"
-    }],
-    "soa_mds": [],
-    "soa":     [
-	 {
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTYxYzZjNTRkY2M2ZjEwYjY",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.soa",
-        "name": "sap-vendor",
-        "version": "9.0.3.0-RC5"
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg4MDliODdmNzgyMTM4ZWQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "sap-sb",
+      "version": "9.0.3.0-RC5",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     }
-    ]
+  ],
+  "soa_mds": [],
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTYxYzZjNTRkY2M2ZjEwYjY",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "sap-vendor",
+    "version": "9.0.3.0-RC5",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }]
 }}
