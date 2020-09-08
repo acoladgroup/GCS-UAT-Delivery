@@ -305,6 +305,46 @@ def deployOsb(item) {
 }
 
 /**
+ * Deploy the OSB composite
+ * @param item item to deploy
+ */
+def deployOrchestrator(item) {
+    if (!item.deployed) {
+        displayManagementMessage(item)
+        try {
+            item.downloaded = false
+            item.deployed = false
+            downloadArtifact(item.group + ":" + item.name + ":" + item.version + ":zip:conductor")
+            // unzip conductor project
+            unzipOrchestratorProject(item)
+            item.downloaded = true
+            if (!params['Dry run ?']) {
+                dir(workingDirectory) {
+                    def stdoutResult = sh(returnStdout: true, script: "mvn clean conductor-mvn-plugin:deploy -P" + props.gcsEnvironment)
+                    println("************   Result of OSB deployment   **************")
+                    println(stdoutResult)
+                    println("********************************************************")
+                    if (!stdoutResult.contains("BUILD SUCCESS")) {
+                        item.deployed = false
+                        throw new Exception("Can't deploy the Orchestrator " + item.group + ":" + item.name + ":" + item.version)
+                    }
+                    item.deployed = true
+                }
+            }
+            displaySuccessMessage(item)
+        } catch (e) {
+            manageCatchedError(item, e)
+        } finally {
+            dir(workingDirectory) {
+                deleteDir()
+            }
+        }
+    } else {
+        manageCompositeAlreadyDeployed(item)
+    }
+}
+
+/**
  * Change the MDS configuration of an ADF app
  * @param item
  */
@@ -407,6 +447,21 @@ def unzipConfigplan(item) {
         println('ERROR : ' + e)
         item.deployed = false
         throw new Exception("Can't unzip config plan " + item.group + ":" + item.name + ":" + item.version)
+    }
+}
+
+/**
+ * Unzip the config plan zip
+ * @param item item to unzip
+ * @return
+ */
+def unzipOrchestratorProject(item) {
+    try {
+        unzip zipFile: workingDirectory + '/' + item.name + '-' + item.version + '-conductor.zip', dir: workingDirectory
+    } catch (e) {
+        println('ERROR : ' + e)
+        item.deployed = false
+        throw new Exception("Can't unzip conductor project " + item.group + ":" + item.name + ":" + item.version)
     }
 }
 
@@ -609,25 +664,13 @@ def buildHTMLReport(items) {
     }
     html+='</fieldset><hr/>'
 
-    // Display Spring services deployment result
+  	// Display Orchestrator deployment result
     html += '<fieldset>'
-    html += '<legend>Spring services</legend>'
-
-    if (items.delivery.spring != null && items.delivery.spring.size() == 0){
+    html += '<legend>Orchestrator</legend>'
+    if (items.delivery.orchestrator != null && items.delivery.orchestrator.size() == 0){
         html += '<span>No artifacts found for this version</span>'
     } else {
-        html += buildTable(items.delivery.spring);
-    }
-    html+='</fieldset><hr/>'
-
-    // Display Angular services deployment result
-    html += '<fieldset>'
-    html += '<legend>Angular services</legend>'
-
-    if (items.delivery.angular != null && items.delivery.angular.size() == 0){
-        html += '<span>No artifacts found for this version</span>'
-    } else {
-        html += buildTable(items.delivery.angular);
+        html += buildTable(items.delivery.orchestrator);
     }
     html+='</fieldset><hr/>'
 
@@ -798,26 +841,17 @@ pipeline {
                 }
             }
         }
-        stage('Deploy Spring component') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.spring != null && json.delivery.spring.size() != 0} }
+       stage('Deploy Orchestrator component') {
+            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.orchestrator != null && json.delivery.orchestrator.size() != 0} }
             steps {
                 script {
-                    for (String item : json.delivery.spring) {
-                        deploySpring(item)
+                    for (String item : json.delivery.orchestrator) {
+                        deployOrchestrator(item) 
                     }
                 }
             }
         }
-        stage('Deploy Angular component') {
-            when { expression {!json.delivery.deployed && env.BRANCH_NAME.startsWith('release') && json.delivery.angular != null && json.delivery.angular.size() != 0} }
-            steps {
-                script {
-                    for (String item : json.delivery.angular) {
-                        deployAngular(item)
-                    }
-                }
-            }
-        }
+        
         stage('Check installation') {
             steps {
                 script {
@@ -857,6 +891,7 @@ pipeline {
                         reportFiles          : 'report.html',
                         reportName           : "Deployment report"
                 ])
+               cleanWs()
             }
         }
     }
