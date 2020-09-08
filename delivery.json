@@ -119,13 +119,5 @@
 			"name": "workunit-common",
 			"version": "9.0.4.0-RC5"
 		}
-    ],
-    "orchestrator": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDM4NzYwZGM5Y2UxMzhjYWQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.gcs.orchestrator",
-        "name": "orchestrator-pre-allocation",
-        "version": "9.0.4.0-RC4"
-    }]
+    ]
 }}
