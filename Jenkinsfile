@@ -891,6 +891,7 @@ pipeline {
                         reportFiles          : 'report.html',
                         reportName           : "Deployment report"
                 ])
+               cleanWs()
             }
         }
     }
