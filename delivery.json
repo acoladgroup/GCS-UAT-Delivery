@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTllNzYyZWExNjBmZDcwM2I",
     "repository": "gcm-release",
@@ -8,8 +8,8 @@
     "name": "GCMApp",
     "version": "9.0.4.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.0.4.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDI4MTZlYWEyNWQyODA0MWM",
@@ -19,8 +19,8 @@
     "name": "DMWebServicesEAR",
     "version": "9.0.4.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.0.4.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTNiZDBkMzM4NDVhOTY1OWM",
@@ -31,7 +31,8 @@
     "version": "9.0.4.0-RC4",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWMyMjU2Y2U5OWY0MjE2ZjU",
@@ -42,7 +43,8 @@
     "version": "9.0.4.0-RC4",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_accounts": [  {
     "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDY1YjRiYTRjNjM3YjQ0NTQ",
@@ -53,7 +55,8 @@
     "version": "9.0.4.0-RC4",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "osb":   [
         {
@@ -65,7 +68,8 @@
       "version": "9.0.4.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTQ3MjFlMmQ2NmY2YmEzNzQ",
@@ -76,7 +80,8 @@
       "version": "9.0.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "soa_mds": [],
@@ -90,7 +95,8 @@
       "version": "9.0.4.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWZjNWZiNDk2ODk2NjJhYzE",
@@ -101,7 +107,8 @@
       "version": "9.0.4.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTNhZjE5ODc4N2IyZDNiOGE",
@@ -112,7 +119,8 @@
       "version": "9.0.4.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWE1NzU2M2YyN2U3Y2RlNmE",
@@ -123,7 +131,8 @@
       "version": "9.0.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDNmZTkyYzc1MGQ2Y2I5OTY",
@@ -134,7 +143,8 @@
       "version": "9.0.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDYzNmUyMWFjMzhhMmY0OTM",
@@ -145,7 +155,8 @@
       "version": "9.0.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDEzMWQwYzc3YjA3ZGQ5MGE",
@@ -156,7 +167,8 @@
       "version": "9.0.4.0-RC2",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWFkZjUzOGZiMzVlOTIyOWE",
@@ -167,7 +179,8 @@
       "version": "9.0.4.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
