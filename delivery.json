@@ -9,7 +9,8 @@
     "version": "9.0.4.0-RC4",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDI4MTZlYWEyNWQyODA0MWM",
@@ -20,7 +21,8 @@
     "version": "9.0.4.0-RC4",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTNiZDBkMzM4NDVhOTY1OWM",
@@ -183,12 +185,15 @@
       "redeployedStatus": true
     }
   ],
-    "orchestrator": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDM4NzYwZGM5Y2UxMzhjYWQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.gcs.orchestrator",
-        "name": "orchestrator-pre-allocation",
-        "version": "9.0.4.0-RC4"
-    }]
+  "orchestrator": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDM4NzYwZGM5Y2UxMzhjYWQ",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.gcs.orchestrator",
+    "name": "orchestrator-pre-allocation",
+    "version": "9.0.4.0-RC4",
+    "downloaded": true,
+    "deployed": false,
+    "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-pre-allocation:9.0.4.0-RC4"
+  }]
 }}
