@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": true,
+  "deployed": false,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTllNzYyZWExNjBmZDcwM2I",
     "repository": "gcm-release",
