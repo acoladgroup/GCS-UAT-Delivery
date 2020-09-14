@@ -1,13 +1,61 @@
 {"delivery": {
     "deployed": false,
-    "spring":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
-        }
-    ]
-}}  
+    "adf_app": [    {
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWE4YTY0YzZkOWE0ZWM5NTk",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMApp",
+        "version": "9.0.4.0-RC6"
+    }],
+    "adf_dmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDQyOTI2NzhlMTRjNzc5YmE",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesEAR",
+        "version": "9.0.4.0-RC6"
+    }],
+    "adf_dmrestws": [    {
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTdjOTVkODg4YzBiNzU5NTI",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesRESTEAR",
+        "version": "9.0.4.0-RC6"
+    }],
+    "adf_pmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTQ5NDc0ZWRlZjQ3OGJiNTY",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "PMWebServicesEAR",
+        "version": "9.0.4.0-RC6"
+    }],
+    "adf_accounts": [    {
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDkyZDQ1NGQ1ODk0OTBjYWI",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMAppAccountsEar",
+        "version": "9.0.4.0-RC6"
+    }],
+    "osb": [    {
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGRlOTAzYzUwODIxM2I5NWU",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.osb",
+        "name": "gcm-sb",
+        "version": "9.0.4.0-RC6"
+    }],
+    "soa_mds": [],
+    "soa": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMThiZjg4ZjJlYzQ2NGYyMjE",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.soa",
+        "name": "default-workunit",
+        "version": "9.0.4.0-RC6"
+    }],
+    "orchestrator": []
+}}
