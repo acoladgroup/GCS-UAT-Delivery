@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTllNzYyZWExNjBmZDcwM2I",
     "repository": "gcm-release",
@@ -193,7 +193,7 @@
     "name": "orchestrator-pre-allocation",
     "version": "9.0.4.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-pre-allocation:9.0.4.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }]
 }}
