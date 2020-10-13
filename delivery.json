@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTFmMDcwYjFhOTMyNGM1MTA",
     "repository": "gcm-release",
@@ -7,9 +7,9 @@
     "group": "com.euroscript.gcm.application",
     "name": "GCMApp",
     "version": "9.0.5.0-RC6",
-    "downloaded": false,
-    "deployed": false,
-    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application:GCMApp:9.0.5.0-RC6"
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDM3MTVjZGYxNDA5YTZlNGE",
@@ -18,9 +18,9 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "DMWebServicesEAR",
     "version": "9.0.5.0-RC6",
-    "downloaded": false,
-    "deployed": false,
-    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.0.5.0-RC6"
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJlZjdjYmViYzg2N2UxYTg",
@@ -29,9 +29,9 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "DMWebServicesRESTEAR",
     "version": "9.0.5.0-RC6",
-    "downloaded": false,
-    "deployed": false,
-    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.0.5.0-RC6"
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTE5ZGM3MDcwMmFkY2I3YWE",
@@ -40,9 +40,9 @@
     "group": "com.euroscript.gcm.application.modules",
     "name": "PMWebServicesEAR",
     "version": "9.0.5.0-RC6",
-    "downloaded": false,
-    "deployed": false,
-    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:PMWebServicesEAR:9.0.5.0-RC6"
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_accounts": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDIyMjY1Nzg1MmZkZDdmZWQ",
@@ -51,9 +51,9 @@
     "group": "com.euroscript.gcm.application",
     "name": "GCMAppAccountsEar",
     "version": "9.0.5.0-RC6",
-    "downloaded": false,
-    "deployed": false,
-    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application:GCMAppAccountsEar:9.0.5.0-RC6"
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
   }],
   "osb": [],
   "soa_mds": [],
@@ -65,9 +65,9 @@
       "group": "com.amplexor.rikai.soa",
       "name": "sap-vendor",
       "version": "9.0.5.0-RC1",
-      "downloaded": false,
-      "deployed": false,
-      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:sap-vendor:9.0.5.0-RC1"
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWRjMGE2NDgwM2IzMzAzYWY",
@@ -76,9 +76,9 @@
       "group": "com.amplexor.rikai.soa",
       "name": "workunit-common",
       "version": "9.0.5.0-RC3",
-      "downloaded": false,
-      "deployed": false,
-      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:workunit-common:9.0.5.0-RC3"
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGYwYjIzNDBjMTIxNGI5OTA",
@@ -87,9 +87,9 @@
       "group": "com.amplexor.rikai.soa",
       "name": "sap-sales",
       "version": "9.0.5.0-RC4",
-      "downloaded": false,
-      "deployed": false,
-      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:sap-sales:9.0.5.0-RC4"
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTMxNDU0Y2E0MTIzMmI1ZGU",
@@ -98,9 +98,9 @@
       "group": "com.amplexor.rikai.soa",
       "name": "default-workunit",
       "version": "9.0.5.0-RC3",
-      "downloaded": false,
-      "deployed": false,
-      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:default-workunit:9.0.5.0-RC3"
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDE5Y2NjMWQxYjhiMmMwZWI",
@@ -109,9 +109,9 @@
       "group": "com.amplexor.rikai.soa",
       "name": "sap-engagement",
       "version": "9.0.5.0-RC5",
-      "downloaded": false,
-      "deployed": false,
-      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:sap-engagement:9.0.5.0-RC5"
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     }
   ],
   "orchestrator": []
