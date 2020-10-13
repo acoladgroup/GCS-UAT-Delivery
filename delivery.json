@@ -1,88 +1,118 @@
 {"delivery": {
+  "deployed": false,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTFmMDcwYjFhOTMyNGM1MTA",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.0.5.0-RC6",
+    "downloaded": false,
     "deployed": false,
-    "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTFmMDcwYjFhOTMyNGM1MTA",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMApp",
-        "version": "9.0.5.0-RC6"
-    }],
-    "adf_dmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDM3MTVjZGYxNDA5YTZlNGE",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "DMWebServicesEAR",
-        "version": "9.0.5.0-RC6"
-    }],
-    "adf_dmrestws": [    {
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJlZjdjYmViYzg2N2UxYTg",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "DMWebServicesRESTEAR",
-        "version": "9.0.5.0-RC6"
-    }],
-    "adf_pmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTE5ZGM3MDcwMmFkY2I3YWE",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "PMWebServicesEAR",
-        "version": "9.0.5.0-RC6"
-    }],
-    "adf_accounts": [    {
-        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDIyMjY1Nzg1MmZkZDdmZWQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMAppAccountsEar",
-        "version": "9.0.5.0-RC6"
-    }],
-    "osb": [],
-    "soa_mds": [],
-    "soa":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDY4MzZlNWQxYjdkOTIwY2Y",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "sap-vendor",
-            "version": "9.0.5.0-RC1"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWRjMGE2NDgwM2IzMzAzYWY",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "workunit-common",
-            "version": "9.0.5.0-RC3"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGYwYjIzNDBjMTIxNGI5OTA",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "sap-sales",
-            "version": "9.0.5.0-RC4"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTMxNDU0Y2E0MTIzMmI1ZGU",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "default-workunit",
-            "version": "9.0.5.0-RC3"
-        },
-		 {
-            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDE5Y2NjMWQxYjhiMmMwZWI",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "sap-engagement",
-            "version": "9.0.5.0-RC5"
-        }
-    ],
-    "orchestrator": []
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application:GCMApp:9.0.5.0-RC6"
+  }],
+  "adf_dmws": [  {
+    "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDM3MTVjZGYxNDA5YTZlNGE",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "DMWebServicesEAR",
+    "version": "9.0.5.0-RC6",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.0.5.0-RC6"
+  }],
+  "adf_dmrestws": [  {
+    "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJlZjdjYmViYzg2N2UxYTg",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "DMWebServicesRESTEAR",
+    "version": "9.0.5.0-RC6",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.0.5.0-RC6"
+  }],
+  "adf_pmws": [  {
+    "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTE5ZGM3MDcwMmFkY2I3YWE",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "PMWebServicesEAR",
+    "version": "9.0.5.0-RC6",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:PMWebServicesEAR:9.0.5.0-RC6"
+  }],
+  "adf_accounts": [  {
+    "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDIyMjY1Nzg1MmZkZDdmZWQ",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMAppAccountsEar",
+    "version": "9.0.5.0-RC6",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application:GCMAppAccountsEar:9.0.5.0-RC6"
+  }],
+  "osb": [],
+  "soa_mds": [],
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDY4MzZlNWQxYjdkOTIwY2Y",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-vendor",
+      "version": "9.0.5.0-RC1",
+      "downloaded": false,
+      "deployed": false,
+      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:sap-vendor:9.0.5.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWRjMGE2NDgwM2IzMzAzYWY",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "workunit-common",
+      "version": "9.0.5.0-RC3",
+      "downloaded": false,
+      "deployed": false,
+      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:workunit-common:9.0.5.0-RC3"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGYwYjIzNDBjMTIxNGI5OTA",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-sales",
+      "version": "9.0.5.0-RC4",
+      "downloaded": false,
+      "deployed": false,
+      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:sap-sales:9.0.5.0-RC4"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTMxNDU0Y2E0MTIzMmI1ZGU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "default-workunit",
+      "version": "9.0.5.0-RC3",
+      "downloaded": false,
+      "deployed": false,
+      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:default-workunit:9.0.5.0-RC3"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDE5Y2NjMWQxYjhiMmMwZWI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-engagement",
+      "version": "9.0.5.0-RC5",
+      "downloaded": false,
+      "deployed": false,
+      "status": "IN ERROR: Can't download the artefact com.amplexor.rikai.soa:sap-engagement:9.0.5.0-RC5"
+    }
+  ],
+  "orchestrator": []
 }}
