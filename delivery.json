@@ -63,8 +63,8 @@
     "name": "xtm-sb",
     "version": "9.1.2.0-RC2",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.osb:xtm-sb:9.1.2.0-RC2"
+    "deployed": true,
+    "status": "OK"
   }],
   "soa_mds": [],
   "soa":   [
@@ -142,8 +142,8 @@
       "name": "workunit-check-at-start",
       "version": "9.1.2.0-RC5",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:workunit-check-at-start:9.1.2.0-RC5"
+      "deployed": true,
+      "status": "OK"
     }
   ],
   "orchestrator":   [
@@ -156,7 +156,8 @@
       "version": "9.1.2.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTdmZWVlZWNmOTgwNWRhYjQ",
@@ -167,7 +168,8 @@
       "version": "9.1.2.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGE5YmJkOTdiMTY2MGY3NmU",
@@ -178,7 +180,8 @@
       "version": "9.1.2.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWQyMzI2ZTViNGU4N2ZhZDA",
@@ -189,7 +192,8 @@
       "version": "9.1.2.0-RC6",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDFhNzVlNmVjZDcwNTUzMmY",
@@ -200,7 +204,8 @@
       "version": "9.1.2.0-RC4",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
