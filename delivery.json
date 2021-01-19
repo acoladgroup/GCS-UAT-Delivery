@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWU2ZWE1YjNkNDRmNTM0MTY",
     "repository": "gcm-release",
@@ -8,8 +8,8 @@
     "name": "GCMApp",
     "version": "9.1.2.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.1.2.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTFiYmZmODIyY2NiODllZWE",
@@ -19,8 +19,8 @@
     "name": "DMWebServicesEAR",
     "version": "9.1.2.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.1.2.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDY5MTcwMzVlZmYzMjc5ZTg",
@@ -30,8 +30,8 @@
     "name": "DMWebServicesRESTEAR",
     "version": "9.1.2.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.1.2.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDZkMDcwNjMzZjMwNmE4MzU",
@@ -41,8 +41,8 @@
     "name": "PMWebServicesEAR",
     "version": "9.1.2.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:PMWebServicesEAR:9.1.2.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_accounts": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTNmYzY4MjA0Y2ExNWQ5YjM",
@@ -52,8 +52,8 @@
     "name": "GCMAppAccountsEar",
     "version": "9.1.2.0-RC4",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMAppAccountsEar:9.1.2.0-RC4"
+    "deployed": true,
+    "status": "OK"
   }],
   "osb": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTQ2OGYxYTZlYTg0YmY1NzU",
@@ -64,7 +64,8 @@
     "version": "9.1.2.0-RC2",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "soa_mds": [],
   "soa":   [
@@ -76,8 +77,8 @@
       "name": "workunit-engine",
       "version": "9.1.2.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:workunit-engine:9.1.2.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTQ0MDk1Y2M4Nzk0MzBlMDY",
@@ -87,8 +88,8 @@
       "name": "xtm-cleanup",
       "version": "9.1.2.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:xtm-cleanup:9.1.2.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGE2MmJhN2EzZWQ0YTU5ZWU",
@@ -98,8 +99,8 @@
       "name": "default-workunit",
       "version": "9.1.2.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:default-workunit:9.1.2.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDA1NWJjMjcxMWY1Y2I4ZjU",
@@ -109,8 +110,8 @@
       "name": "xtm-soa-setup",
       "version": "9.1.2.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:xtm-soa-setup:9.1.2.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWFjMDAwZGM1YmQyMzk4Yzk",
@@ -120,8 +121,8 @@
       "name": "xtm-setup",
       "version": "9.1.2.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:xtm-setup:9.1.2.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGU2MTk0ZGI1OTU3ZjA4MGU",
@@ -131,8 +132,8 @@
       "name": "automatic-delivery",
       "version": "9.1.2.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:automatic-delivery:9.1.2.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDU1MmE3NjQ3MzA5ZGE3ZGY",
@@ -143,7 +144,8 @@
       "version": "9.1.2.0-RC5",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ],
   "orchestrator":   [
