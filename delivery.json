@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": false,
+  "deployed": true,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWU2ZWE1YjNkNDRmNTM0MTY",
     "repository": "gcm-release",
@@ -9,7 +9,8 @@
     "version": "9.1.2.0-RC8",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_dmws": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTFiYmZmODIyY2NiODllZWE",
@@ -20,7 +21,8 @@
     "version": "9.1.2.0-RC8",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDY5MTcwMzVlZmYzMjc5ZTg",
@@ -31,7 +33,8 @@
     "version": "9.1.2.0-RC8",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDZkMDcwNjMzZjMwNmE4MzU",
@@ -42,7 +45,8 @@
     "version": "9.1.2.0-RC8",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "adf_accounts": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTNmYzY4MjA0Y2ExNWQ5YjM",
@@ -53,19 +57,21 @@
     "version": "9.1.2.0-RC8",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "osb": [],
   "soa_mds": [],
-  "soa": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTI0ZjJjMzRiZGQ5NjgwMzU",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.soa",
-        "name": "ucm-delivery-copy-caller",
-        "version": "9.1.2.0-RC11",
-    	"downloaded": false,
-    	"deployed": false
-    }],
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTI0ZjJjMzRiZGQ5NjgwMzU",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "ucm-delivery-copy-caller",
+    "version": "9.1.2.0-RC11",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
   "orchestrator": []
 }}
