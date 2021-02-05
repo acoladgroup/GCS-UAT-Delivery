@@ -1,5 +1,5 @@
 {"delivery": {
-  "deployed": true,
+  "deployed": false,
   "adf_app": [  {
     "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWU2ZWE1YjNkNDRmNTM0MTY",
     "repository": "gcm-release",
@@ -63,7 +63,9 @@
         "format": "maven2",
         "group": "com.amplexor.rikai.soa",
         "name": "ucm-delivery-copy-caller",
-        "version": "9.1.2.0-RC11"
+        "version": "9.1.2.0-RC11",
+    	"downloaded": false,
+    	"deployed": false
     }],
   "orchestrator": []
 }}
