@@ -57,6 +57,13 @@
   }],
   "osb": [],
   "soa_mds": [],
-  "soa": [],
+  "soa": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTI0ZjJjMzRiZGQ5NjgwMzU",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.soa",
+        "name": "ucm-delivery-copy-caller",
+        "version": "9.1.2.0-RC11"
+    }],
   "orchestrator": []
 }}
