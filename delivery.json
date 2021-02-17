@@ -1,19 +1,22 @@
 {"delivery": {
-    "deployed": false,
-    "adf_app": [],
-    "adf_dmws": [],
-    "adf_dmrestws": [],
-    "adf_pmws": [],
-    "adf_accounts": [],
-    "osb": [],
-    "soa_mds": [],
-    "soa": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDYzOGIyMTZiNDI0ODcyOGI",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.soa",
-        "name": "sap-vendor",
-        "version": "9.1.3.0-RC3"
-    }],
-    "orchestrator": []
+  "deployed": true,
+  "adf_app": [],
+  "adf_dmws": [],
+  "adf_dmrestws": [],
+  "adf_pmws": [],
+  "adf_accounts": [],
+  "osb": [],
+  "soa_mds": [],
+  "soa": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDYzOGIyMTZiNDI0ODcyOGI",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.soa",
+    "name": "sap-vendor",
+    "version": "9.1.3.0-RC3",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
+  "orchestrator": []
 }}
