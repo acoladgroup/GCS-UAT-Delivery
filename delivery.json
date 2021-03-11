@@ -1,61 +1,83 @@
 {"delivery": {
+  "deployed": false,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDdlNzEyZjI5MjAwNDI2MDI",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.0.4.1-RC3",
+    "downloaded": false,
     "deployed": false,
-    "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDdlNzEyZjI5MjAwNDI2MDI",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMApp",
-        "version": "9.0.4.1-RC3"
-    }],
-    "adf_dmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTVmNjBkYzY4MWUyYjg3MzI",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "DMWebServicesEAR",
-        "version": "9.0.4.1-RC3"
-    }],
-    "adf_dmrestws": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDlkNjdkYzRlN2Q0YTdmMzg",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "DMWebServicesRESTEAR",
-        "version": "9.0.4.1-RC3"
-    }],
-    "adf_pmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGE5M2QyYTM3NDhkY2JkNDU",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "PMWebServicesEAR",
-        "version": "9.0.4.1-RC3"
-    }],
-    "adf_accounts": [    {
-        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDRjNWI1OTBlYzgwNTgzMmE",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMAppAccountsEar",
-        "version": "9.0.4.1-RC3"
-    }],
-    "osb": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWM5MzExNGEyYWZlZGVjNTQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "gcm-sb",
-        "version": "9.0.4.1-RC1"
-    }],
-    "soa_mds": [],
-    "soa": [    {
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application:GCMApp:9.0.4.1-RC3"
+  }],
+  "adf_dmws": [  {
+    "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTVmNjBkYzY4MWUyYjg3MzI",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "DMWebServicesEAR",
+    "version": "9.0.4.1-RC3",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.0.4.1-RC3"
+  }],
+  "adf_dmrestws": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDlkNjdkYzRlN2Q0YTdmMzg",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "DMWebServicesRESTEAR",
+    "version": "9.0.4.1-RC3",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.0.4.1-RC3"
+  }],
+  "adf_pmws": [  {
+    "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGE5M2QyYTM3NDhkY2JkNDU",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "PMWebServicesEAR",
+    "version": "9.0.4.1-RC3",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application.modules:PMWebServicesEAR:9.0.4.1-RC3"
+  }],
+  "adf_accounts": [  {
+    "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDRjNWI1OTBlYzgwNTgzMmE",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMAppAccountsEar",
+    "version": "9.0.4.1-RC3",
+    "downloaded": false,
+    "deployed": false,
+    "status": "IN ERROR: Can't download the artefact com.euroscript.gcm.application:GCMAppAccountsEar:9.0.4.1-RC3"
+  }],
+  "osb": [  {
+    "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWM5MzExNGEyYWZlZGVjNTQ",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.amplexor.rikai.osb",
+    "name": "gcm-sb",
+    "version": "9.0.4.1-RC1",
+    "downloaded": true,
+    "deployed": true,
+    "status": "OK"
+  }],
+  "soa_mds": [],
+  "soa":   [
+        {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTdjYzYwZTI4ODYwMjAzYTI",
       "repository": "gcm-release",
       "format": "maven2",
       "group": "com.amplexor.rikai.soa",
       "name": "default-workunit",
-      "version": "9.1.4.0-RC1"
+      "version": "9.1.4.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDkwZTQyZjU1MjA1M2Q5YTQ",
@@ -63,23 +85,34 @@
       "format": "maven2",
       "group": "com.amplexor.rikai.soa",
       "name": "workunit-common",
-      "version": "9.1.4.0-RC3"
+      "version": "9.1.4.0-RC3",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
-	{
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWUyNjE4Njg4OWI1MWFkZWE",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.soa",
-        "name": "sap-sales",
-        "version": "9.0.4.1-RC2"
-    }],
-    "orchestrator": [     {
+        {
+      "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWUyNjE4Njg4OWI1MWFkZWE",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "sap-sales",
+      "version": "9.0.4.1-RC2",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:sap-sales:9.0.4.1-RC2"
+    }
+  ],
+  "orchestrator":   [
+        {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWZiNzk2NmJjYzcxZDhmYWM",
       "repository": "gcm-release",
       "format": "maven2",
       "group": "com.amplexor.gcs.orchestrator",
       "name": "orchestrator-sales",
-      "version": "9.1.4.0-RC1"
+      "version": "9.1.4.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJhZDQ2MWVkMGQxODY2OGQ",
@@ -87,7 +120,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.orchestrator",
       "name": "orchestrator-delivery",
-      "version": "9.1.4.0-RC1"
+      "version": "9.1.4.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDBhYmE1ODA0MzE1YzllZDQ",
@@ -95,7 +131,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.orchestrator",
       "name": "orchestrator-common",
-      "version": "9.1.4.0-RC1"
+      "version": "9.1.4.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg2MDEzY2RiODFlNDFiZTY",
@@ -103,7 +142,10 @@
       "format": "maven2",
       "group": "com.amplexor.gcs.orchestrator",
       "name": "orchestrator-xtm",
-      "version": "9.1.4.0-RC1"
-    }]
+      "version": "9.1.4.0-RC1",
+      "downloaded": true,
+      "deployed": true,
+      "status": "OK"
+    }
+  ]
 }}
-
