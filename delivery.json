@@ -64,7 +64,8 @@
     "version": "9.0.4.1-RC1",
     "downloaded": true,
     "deployed": true,
-    "status": "OK"
+    "status": "OK",
+    "redeployedStatus": true
   }],
   "soa_mds": [],
   "soa":   [
@@ -77,7 +78,8 @@
       "version": "9.1.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDkwZTQyZjU1MjA1M2Q5YTQ",
@@ -88,7 +90,8 @@
       "version": "9.1.4.0-RC3",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWUyNjE4Njg4OWI1MWFkZWE",
@@ -112,7 +115,8 @@
       "version": "9.1.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJhZDQ2MWVkMGQxODY2OGQ",
@@ -123,7 +127,8 @@
       "version": "9.1.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDBhYmE1ODA0MzE1YzllZDQ",
@@ -134,7 +139,8 @@
       "version": "9.1.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg2MDEzY2RiODFlNDFiZTY",
@@ -145,7 +151,8 @@
       "version": "9.1.4.0-RC1",
       "downloaded": true,
       "deployed": true,
-      "status": "OK"
+      "status": "OK",
+      "redeployedStatus": true
     }
   ]
 }}
