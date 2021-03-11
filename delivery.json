@@ -1,13 +1,109 @@
 {"delivery": {
     "deployed": false,
-    "spring":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
-        }
-    ]
-}}  
+    "adf_app": [    {
+        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDdlNzEyZjI5MjAwNDI2MDI",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMApp",
+        "version": "9.0.4.1-RC3"
+    }],
+    "adf_dmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTVmNjBkYzY4MWUyYjg3MzI",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesEAR",
+        "version": "9.0.4.1-RC3"
+    }],
+    "adf_dmrestws": [    {
+        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDlkNjdkYzRlN2Q0YTdmMzg",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesRESTEAR",
+        "version": "9.0.4.1-RC3"
+    }],
+    "adf_pmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGE5M2QyYTM3NDhkY2JkNDU",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "PMWebServicesEAR",
+        "version": "9.0.4.1-RC3"
+    }],
+    "adf_accounts": [    {
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDRjNWI1OTBlYzgwNTgzMmE",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMAppAccountsEar",
+        "version": "9.0.4.1-RC3"
+    }],
+    "osb": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWM5MzExNGEyYWZlZGVjNTQ",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.osb",
+        "name": "gcm-sb",
+        "version": "9.0.4.1-RC1"
+    }],
+    "soa_mds": [],
+    "soa": [    {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTdjYzYwZTI4ODYwMjAzYTI",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "default-workunit",
+      "version": "9.1.4.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDkwZTQyZjU1MjA1M2Q5YTQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "workunit-common",
+      "version": "9.1.4.0-RC3"
+    },
+	{
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWUyNjE4Njg4OWI1MWFkZWE",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.amplexor.rikai.soa",
+        "name": "sap-sales",
+        "version": "9.0.4.1-RC2"
+    }],
+    "orchestrator": [     {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWZiNzk2NmJjYzcxZDhmYWM",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-sales",
+      "version": "9.1.4.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWJhZDQ2MWVkMGQxODY2OGQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-delivery",
+      "version": "9.1.4.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDBhYmE1ODA0MzE1YzllZDQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-common",
+      "version": "9.1.4.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDg2MDEzY2RiODFlNDFiZTY",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-xtm",
+      "version": "9.1.4.0-RC1"
+    }]
+}}
+
