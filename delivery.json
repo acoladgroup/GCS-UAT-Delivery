@@ -19,8 +19,8 @@
     "name": "DMWebServicesEAR",
     "version": "9.1.6.0-RC3",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.1.6.0-RC3"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_dmrestws": [  {
     "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDAyZWZiMjUxNTk2ZjkzZWQ",
@@ -30,8 +30,8 @@
     "name": "DMWebServicesRESTEAR",
     "version": "9.1.6.0-RC3",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.1.6.0-RC3"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_pmws": [  {
     "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDM5NmJmMjYzMzYxOWUwNTQ",
@@ -41,8 +41,8 @@
     "name": "PMWebServicesEAR",
     "version": "9.1.6.0-RC3",
     "downloaded": true,
-    "deployed": false,
-    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:PMWebServicesEAR:9.1.6.0-RC3"
+    "deployed": true,
+    "status": "OK"
   }],
   "adf_accounts": [  {
     "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWFlMjZiMjEwMzIwNmYzOTk",
@@ -64,8 +64,8 @@
       "name": "gcm-sb",
       "version": "9.1.6.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.osb:gcm-sb:9.1.6.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTliNjM1OWNhYjIwNTdlNTc",
@@ -75,8 +75,8 @@
       "name": "xtm-sb",
       "version": "9.1.6.0-RC3",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.osb:xtm-sb:9.1.6.0-RC3"
+      "deployed": true,
+      "status": "OK"
     }
   ],
   "soa_mds": [],
@@ -89,8 +89,8 @@
       "name": "default-workunit",
       "version": "9.1.6.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:default-workunit:9.1.6.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTQ5MzY4NjFhZjA1MTIxN2Y",
@@ -100,8 +100,8 @@
       "name": "workunit-common",
       "version": "9.1.6.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:workunit-common:9.1.6.0-RC1"
+      "deployed": true,
+      "status": "OK"
     }
   ],
   "orchestrator":   [
@@ -113,8 +113,8 @@
       "name": "orchestrator-common",
       "version": "9.1.6.0-RC4",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-common:9.1.6.0-RC4"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGY3N2ZlZmE2Y2U2NTMwN2Y",
@@ -124,8 +124,8 @@
       "name": "orchestrator-pre-allocation",
       "version": "9.1.6.0-RC2",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-pre-allocation:9.1.6.0-RC2"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDk4YTU3YzJmYzY3YmQ5ZmM",
@@ -135,8 +135,8 @@
       "name": "orchestrator-workunit",
       "version": "9.1.6.0-RC4",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-workunit:9.1.6.0-RC4"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTA5NDYwOGY4MTliZjA1NzY",
@@ -146,8 +146,8 @@
       "name": "orchestrator-process",
       "version": "9.1.6.0-RC3",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-process:9.1.6.0-RC3"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDZmNmMyNzRlZjEyNDMxNjE",
@@ -157,8 +157,8 @@
       "name": "orchestrator-user-management",
       "version": "9.1.6.0-RC1",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-user-management:9.1.6.0-RC1"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDdhYTlhNzVkNDYxZjY1YjQ",
@@ -168,8 +168,8 @@
       "name": "orchestrator-sales",
       "version": "9.1.6.0-RC2",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-sales:9.1.6.0-RC2"
+      "deployed": true,
+      "status": "OK"
     },
         {
       "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWVmNTliMmU4MzE1OGIzNTk",
@@ -179,8 +179,8 @@
       "name": "orchestrator-xtm",
       "version": "9.1.6.0-RC5",
       "downloaded": true,
-      "deployed": false,
-      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-xtm:9.1.6.0-RC5"
+      "deployed": true,
+      "status": "OK"
     }
   ]
 }}
