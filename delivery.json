@@ -1,136 +1,186 @@
 {"delivery": {
+  "deployed": false,
+  "adf_app": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDc1OTkwMjg3NjM1NTZiMmE",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMApp",
+    "version": "9.1.6.0-RC3",
+    "downloaded": true,
     "deployed": false,
-    "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDc1OTkwMjg3NjM1NTZiMmE",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMApp",
-        "version": "9.1.6.0-RC3"
-    }],
-    "adf_dmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTEyNzU2ZmJmZTQ0Yjg3NGI",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "DMWebServicesEAR",
-        "version": "9.1.6.0-RC3"
-    }],
-    "adf_dmrestws": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDAyZWZiMjUxNTk2ZjkzZWQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "DMWebServicesRESTEAR",
-        "version": "9.1.6.0-RC3"
-    }],
-    "adf_pmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDM5NmJmMjYzMzYxOWUwNTQ",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application.modules",
-        "name": "PMWebServicesEAR",
-        "version": "9.1.6.0-RC3"
-    }],
-    "adf_accounts": [    {
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWFlMjZiMjEwMzIwNmYzOTk",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.euroscript.gcm.application",
-        "name": "GCMAppAccountsEar",
-        "version": "9.1.6.0-RC3"
-    }],
-    "osb": [    {
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTM3ZjM1OWI5NzEzN2VhNTU",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "gcm-sb",
-        "version": "9.1.6.0-RC1"
+    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMApp:9.1.6.0-RC3"
+  }],
+  "adf_dmws": [  {
+    "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTEyNzU2ZmJmZTQ0Yjg3NGI",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "DMWebServicesEAR",
+    "version": "9.1.6.0-RC3",
+    "downloaded": true,
+    "deployed": false,
+    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesEAR:9.1.6.0-RC3"
+  }],
+  "adf_dmrestws": [  {
+    "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDAyZWZiMjUxNTk2ZjkzZWQ",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "DMWebServicesRESTEAR",
+    "version": "9.1.6.0-RC3",
+    "downloaded": true,
+    "deployed": false,
+    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:DMWebServicesRESTEAR:9.1.6.0-RC3"
+  }],
+  "adf_pmws": [  {
+    "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDM5NmJmMjYzMzYxOWUwNTQ",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application.modules",
+    "name": "PMWebServicesEAR",
+    "version": "9.1.6.0-RC3",
+    "downloaded": true,
+    "deployed": false,
+    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application.modules:PMWebServicesEAR:9.1.6.0-RC3"
+  }],
+  "adf_accounts": [  {
+    "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWFlMjZiMjEwMzIwNmYzOTk",
+    "repository": "gcm-release",
+    "format": "maven2",
+    "group": "com.euroscript.gcm.application",
+    "name": "GCMAppAccountsEar",
+    "version": "9.1.6.0-RC3",
+    "downloaded": true,
+    "deployed": false,
+    "status": "IN ERROR: Can't deployed the artefact com.euroscript.gcm.application:GCMAppAccountsEar:9.1.6.0-RC3"
+  }],
+  "osb":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTM3ZjM1OWI5NzEzN2VhNTU",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "gcm-sb",
+      "version": "9.1.6.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.osb:gcm-sb:9.1.6.0-RC1"
     },
-				{
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTliNjM1OWNhYjIwNTdlNTc",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.rikai.osb",
-        "name": "xtm-sb",
-        "version": "9.1.6.0-RC3"
-    }],
-    "soa_mds": [],
-    "soa":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGZjYzhiNWVkNTAxNWU1ZGQ",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "default-workunit",
-            "version": "9.1.6.0-RC1"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTQ5MzY4NjFhZjA1MTIxN2Y",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.rikai.soa",
-            "name": "workunit-common",
-            "version": "9.1.6.0-RC1"
-        }
-    ],
-    "orchestrator":     [
-                {
-            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTEzZmNlYzNiNDY5M2IzM2E",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-common",
-            "version": "9.1.6.0-RC4"
-        },
-				{
-            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGY3N2ZlZmE2Y2U2NTMwN2Y",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-pre-allocation",
-            "version": "9.1.6.0-RC2"
-        },
-				{
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDk4YTU3YzJmYzY3YmQ5ZmM",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-workunit",
-            "version": "9.1.6.0-RC4"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTA5NDYwOGY4MTliZjA1NzY",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-process",
-            "version": "9.1.6.0-RC3"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDZmNmMyNzRlZjEyNDMxNjE",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-user-management",
-            "version": "9.1.6.0-RC1"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDdhYTlhNzVkNDYxZjY1YjQ",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-sales",
-            "version": "9.1.6.0-RC2"
-        },
-                {
-            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWVmNTliMmU4MzE1OGIzNTk",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-xtm",
-            "version": "9.1.6.0-RC5"
-        }
-    ]
+        {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTliNjM1OWNhYjIwNTdlNTc",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.osb",
+      "name": "xtm-sb",
+      "version": "9.1.6.0-RC3",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.osb:xtm-sb:9.1.6.0-RC3"
+    }
+  ],
+  "soa_mds": [],
+  "soa":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGZjYzhiNWVkNTAxNWU1ZGQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "default-workunit",
+      "version": "9.1.6.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:default-workunit:9.1.6.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTQ5MzY4NjFhZjA1MTIxN2Y",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.rikai.soa",
+      "name": "workunit-common",
+      "version": "9.1.6.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.rikai.soa:workunit-common:9.1.6.0-RC1"
+    }
+  ],
+  "orchestrator":   [
+        {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTEzZmNlYzNiNDY5M2IzM2E",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-common",
+      "version": "9.1.6.0-RC4",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-common:9.1.6.0-RC4"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGY3N2ZlZmE2Y2U2NTMwN2Y",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-pre-allocation",
+      "version": "9.1.6.0-RC2",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-pre-allocation:9.1.6.0-RC2"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDk4YTU3YzJmYzY3YmQ5ZmM",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-workunit",
+      "version": "9.1.6.0-RC4",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-workunit:9.1.6.0-RC4"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTA5NDYwOGY4MTliZjA1NzY",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-process",
+      "version": "9.1.6.0-RC3",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-process:9.1.6.0-RC3"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDZmNmMyNzRlZjEyNDMxNjE",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-user-management",
+      "version": "9.1.6.0-RC1",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-user-management:9.1.6.0-RC1"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDdhYTlhNzVkNDYxZjY1YjQ",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-sales",
+      "version": "9.1.6.0-RC2",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-sales:9.1.6.0-RC2"
+    },
+        {
+      "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWVmNTliMmU4MzE1OGIzNTk",
+      "repository": "gcm-release",
+      "format": "maven2",
+      "group": "com.amplexor.gcs.orchestrator",
+      "name": "orchestrator-xtm",
+      "version": "9.1.6.0-RC5",
+      "downloaded": true,
+      "deployed": false,
+      "status": "IN ERROR: Can't deployed the artefact com.amplexor.gcs.orchestrator:orchestrator-xtm:9.1.6.0-RC5"
+    }
+  ]
 }}
