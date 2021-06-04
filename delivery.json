@@ -1,13 +1,64 @@
 {"delivery": {
     "deployed": false,
-    "spring":     [
+    "adf_app": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWU5MDViZjE5YWZmOTUyYjk",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMApp",
+        "version": "9.1.6.1-RC1"
+    }],
+    "adf_dmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWVlOTdlMjA0MDY3MWU0Yzc",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesEAR",
+        "version": "9.1.6.1-RC1"
+    }],
+    "adf_dmrestws": [    {
+        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGE5YTJiOGRkN2Y5NGU1MGQ",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "DMWebServicesRESTEAR",
+        "version": "9.1.6.1-RC1"
+    }],
+    "adf_pmws": [    {
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGUwNDY3Y2I3OTRjNTBhYzg",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application.modules",
+        "name": "PMWebServicesEAR",
+        "version": "9.1.6.1-RC1"
+    }],
+    "adf_accounts": [    {
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYWRkZTYzNGJmZGY1YzNkN2U",
+        "repository": "gcm-release",
+        "format": "maven2",
+        "group": "com.euroscript.gcm.application",
+        "name": "GCMAppAccountsEar",
+        "version": "9.1.6.1-RC1"
+    }],
+    "osb": [],
+    "soa_mds": [],
+    "soa": [],
+    "orchestrator":     [
                 {
-            "id": "Z2NtLXJlbGVhc2U6ZGZiZWYwOWVmZTE2NDRlYTc2MWU1MWEwZjQyOTM5Yjc",
+            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDQxZDYxNzFiMzVkMzFhMWU",
             "repository": "gcm-release",
             "format": "maven2",
-            "group": "com.amplexor.gcs.cloud.service",
-            "name": "service-test",
-            "version" : "3.0.1.0-RC1"
+            "group": "com.amplexor.gcs.orchestrator",
+            "name": "orchestrator-sales",
+            "version": "9.1.6.1-RC1"
+        },
+                {
+            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGNmYzgyNmE5M2MxMDVlYTA",
+            "repository": "gcm-release",
+            "format": "maven2",
+            "group": "com.amplexor.gcs.orchestrator",
+            "name": "orchestrator-xtm",
+            "version": "9.1.6.1-RC1"
         }
     ]
-}}  
+}}
