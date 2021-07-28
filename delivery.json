@@ -1,7 +1,7 @@
 {"delivery": {
     "deployed": false,
     "adf_app": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMWQyNGM4NzNiMWU3ZGZmNmM",
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDllMDJmN2E5ZTY1Y2NmYWM",
         "repository": "gcm-release",
         "format": "maven2",
         "group": "com.euroscript.gcm.application",
@@ -9,7 +9,7 @@
         "version": "9.1.8.0-RC8"
     }],
     "adf_dmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGYwZmRkNzQyZWI4ZjgyOTU",
+        "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDhlNTU3Mzc4OWYyYjQzNjY",
         "repository": "gcm-release",
         "format": "maven2",
         "group": "com.euroscript.gcm.application.modules",
@@ -17,7 +17,7 @@
         "version": "9.1.8.0-RC8"
     }],
     "adf_dmrestws": [    {
-        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTI5ZTk4NWIxODE5YjBmNGQ",
+        "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTI5OGE0NjIyMzk4YWVmODg",
         "repository": "gcm-release",
         "format": "maven2",
         "group": "com.euroscript.gcm.application.modules",
@@ -25,7 +25,7 @@
         "version": "9.1.8.0-RC8"
     }],
     "adf_pmws": [    {
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTg5OGY4MGExNDA0OGI1YmE",
+        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTc2YmY5YjRmYmY5MGQ5ZjE",
         "repository": "gcm-release",
         "format": "maven2",
         "group": "com.euroscript.gcm.application.modules",
@@ -33,7 +33,7 @@
         "version": "9.1.8.0-RC8"
     }],
     "adf_accounts": [    {
-        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGRiNzYwYmE2Y2VjZmMzNjE",
+        "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNGRmMzEyNTg1YTgxNzcwYWY",
         "repository": "gcm-release",
         "format": "maven2",
         "group": "com.euroscript.gcm.application",
@@ -43,63 +43,7 @@
     "osb": [],
     "soa_mds": [],
     "soa": [],
-    "orchestrator":     [{
-            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDk4ODc3YzA1OTIwY2ExZDM",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-purchase-order",
-            "version": "9.1.8.0-RC1"
-        },
-         {
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MGYwZTMwYjgzYTA2MGVlYTY",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-workunit",
-            "version": "9.1.8.0-RC5"
-        },
-        {
-            "id": "Z2NtLXJlbGVhc2U6MmIwNmQyZmEyZTFiNDJhNDczZTk2NjRhNjgxYmI4MjA",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-process",
-            "version": "9.1.8.0-RC1"
-        },
-        {
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDk0MThjZGQyZTk4ZGE2MjI",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-connector",
-            "version": "9.1.8.0-RC6"
-        },
-        {
-            "id": "Z2NtLXJlbGVhc2U6ODhiZmFmYTk2MGJhYjUyMTVjZTllZmI5OTJkZTQyNzQ",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-vendor-invoicing",
-            "version": "9.1.8.0-RC1"
-        },
-        {
-            "id": "Z2NtLXJlbGVhc2U6Yzg2MzUzOGEwNjA3MTg2MDY2ZThkZjE4NDVlOWQ0MzM",
-            "repository": "gcm-release",
-            "format": "maven2",
-            "group": "com.amplexor.gcs.orchestrator",
-            "name": "orchestrator-sales",
-            "version": "9.1.8.0-RC5"
-        },
-		{
-        "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTdhOTFiNjVkMTU4ZGI2M2Y",
-        "repository": "gcm-release",
-        "format": "maven2",
-        "group": "com.amplexor.gcs.orchestrator",
-        "name": "orchestrator-xtm",
-        "version": "9.1.8.0-RC4"
-    },
-    {
+    "orchestrator": [    {
         "id": "Z2NtLXJlbGVhc2U6YTFmM2VkZDhlMWIwNmNmYTMzNGI3NmRhOTNkMTM1OGU",
         "repository": "gcm-release",
         "format": "maven2",
@@ -108,4 +52,3 @@
         "version": "9.1.8.0-RC8"
     }]
 }}
-
